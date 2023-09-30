@@ -63,14 +63,18 @@ a.text-sm.leading-6.text-color-primario {
 .bg-color-celeste {
     background-color: #e0e6ff;
 }
+
+.bg-color-espe{
+    background-color: #016E40;
+}
 .bg-color-primario {
-    background-color: #004aad;
+    background-color: #016E40;
 }
 .bg-color-primario-dark {
     background-color: #103970;
 }
 .bg-color-secundario {
-    background-color: #757afb;
+    background-color: #34AA55;
 }
 
 .bg-color-terciario {
@@ -83,13 +87,13 @@ a.text-sm.leading-6.text-color-primario {
     color: #002e6a;
 }
 .text-color-secundario {
-    color: #676cfa;
+    color: #34AA55;
 }
 .text-color-espe {
-    color: #147445;
+    color: #016E40;
 }
 .border-color-secundario{
-    border-color: 1px solid #5474fc;
+    border-color: 1px solid #34AA55;
 }
 .fade-in {
     animation: fadeIn 2s ease-in-out;
@@ -107,6 +111,8 @@ a.text-sm.leading-6.text-color-primario {
     width: 100%;
     height: 100%;
 }
+
+/* COLORES Y EFECTOS DE CÍRCULOS */
 .bubbles-box .inner .bubble-1 {
     position: absolute;
     width: 100px;
@@ -115,9 +121,10 @@ a.text-sm.leading-6.text-color-primario {
     left: 8%;
     z-index: 0;
     border-radius: 50%;
-    background: radial-gradient(circle at 65% 15%, white 1px, aqua 3%, darkblue 60%, aqua 100%);  
+    background: radial-gradient(circle at 65% 15%, #4CAF50 1px, #81C784 3%, #388E3C 60%, #81C784 100%);  
     animation: side 2s ease-in-out infinite alternate;
 }
+
 .bubbles-box .inner .bubble-2 {
     position: absolute;
     width: 150px;
@@ -126,9 +133,10 @@ a.text-sm.leading-6.text-color-primario {
     right: 14%;
     z-index: 0;
     border-radius: 50%;
-    background: radial-gradient(circle at 65% 15%, white 1px, aqua 3%, darkblue 60%, aqua 100%);  
+    background: radial-gradient(circle at 65% 15%, #4CAF50 1px, #81C784 3%, #388E3C 60%, #81C784 100%);  
     animation: otherside 2s ease-in-out infinite alternate;
 }
+
 .bubbles-box .inner .bubble-3 {
     position: absolute;
     width: 150px;
@@ -137,9 +145,10 @@ a.text-sm.leading-6.text-color-primario {
     right: 40%;
     z-index: 0;
     border-radius: 50%;
-    background: radial-gradient(circle at 65% 15%, white 1px, aqua 3%, darkblue 60%, aqua 100%);  
+    background: radial-gradient(circle at 65% 15%, #4CAF50 1px, #81C784 3%, #388E3C 60%, #81C784 100%);  
     animation: otherside 2s ease-in-out infinite alternate;
 }
+
 .bubbles-box .inner .bubble-sm-1 {
     position: absolute;
     width: 50px;
@@ -148,9 +157,10 @@ a.text-sm.leading-6.text-color-primario {
     right: 50%;
     z-index: 0;
     border-radius: 50%;
-    background: radial-gradient(circle at 65% 15%, white 1px, aqua 3%, darkblue 60%, aqua 100%);  
+    background: radial-gradient(circle at 65% 15%, #4CAF50 1px, #81C784 3%, #388E3C 60%, #81C784 100%);  
     animation: side 2s ease-in-out infinite alternate;
 }
+
 .bubbles-box .inner .bubble-sm-2 {
     position: absolute;
     width: 50px;
@@ -159,9 +169,10 @@ a.text-sm.leading-6.text-color-primario {
     right: 40%;
     z-index: 0;
     border-radius: 50%;
-    background: radial-gradient(circle at 65% 15%, white 1px, aqua 3%, darkblue 60%, aqua 100%);  
+    background: radial-gradient(circle at 65% 15%, #4CAF50 1px, #81C784 3%, #388E3C 60%, #81C784 100%);  
     animation: side 2s ease-in-out infinite alternate;
 }
+
 .bubbles-box .inner .bubble-sm-3 {
     position: absolute;
     width: 50px;
@@ -170,9 +181,11 @@ a.text-sm.leading-6.text-color-primario {
     right: 20%;
     z-index: 0;
     border-radius: 50%;
-    background: radial-gradient(circle at 65% 15%, white 1px, aqua 3%, darkblue 60%, aqua 100%);  
+    background: radial-gradient(circle at 65% 15%, #4CAF50 1px, #81C784 3%, #388E3C 60%, #81C784 100%);  
     animation: otherside 2s ease-in-out infinite alternate;
 }
+
+
 .flip-card {
     /* background-color: transparent; */
     width: 100%;

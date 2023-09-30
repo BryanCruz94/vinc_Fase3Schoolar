@@ -129,7 +129,7 @@ const FilosofiaPage = () => {
               </div>
               <br /><br />
               <div className="mt-10 flex-col lg:flex-row relative">
-                <div className="bg-color-lila w-full p-4 lg:p-10 lg:w-2/3 lg:py-16 lg:pl-16 lg:pr-56 shadow-xl">
+                <div className="bg-lime-500/10 w-full p-4 lg:p-10 lg:w-2/3 lg:py-16 lg:pl-16 lg:pr-56 shadow-xl">
                   <h1 className="second-title mb-4">Misión</h1>
                   <p className="text-gray-700 text-sm text-justify">
                     La Universidad de las Fuerzas Armadas-ESPE forma personas en el campo científico y tecnológico bajo un marco de principios y valores; y, genera  conocimiento transferible para contribuir al progreso del país y Fuerzas Armadas, a través de la docencia, investigación y vinculación con la sociedad.
@@ -175,7 +175,7 @@ const FilosofiaPage = () => {
                   <li className="mr-2">
                     <a
                       href="#"
-                      className={"inline-block p-4 " + (openTab === 1 ? "text-blue-600 border-b-2 border-blue-600 rounded-t-lg dark:text-blue-500 dark:border-blue-500 active" : "border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300")}
+                      className={"inline-block p-4 " + (openTab === 1 ? "text-color-secundario border-b-2 border-lime-500 rounded-t-lg  active" : "border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300")}
                       onClick={e => {
                         e.preventDefault();
                         setOpenTab(1);
@@ -187,7 +187,7 @@ const FilosofiaPage = () => {
                   <li className="mr-2">
                     <a
                       href="#"
-                      className={"inline-block p-4 " + (openTab === 2 ? "text-blue-600 border-b-2 border-blue-600 rounded-t-lg dark:text-blue-500 dark:border-blue-500 active" : "border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300")} aria-current="page"
+                      className={"inline-block p-4 " + (openTab === 2 ? "text-color-secundario border-b-2 border-lime-500 rounded-t-lg  active" : "border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300")} aria-current="page"
                       onClick={e => {
                         e.preventDefault();
                         setOpenTab(2);
@@ -199,7 +199,7 @@ const FilosofiaPage = () => {
                   <li className="mr-2">
                     <a
                       href="#"
-                      className={"inline-block p-4 " + (openTab === 3 ? "text-blue-600 border-b-2 border-blue-600 rounded-t-lg dark:text-blue-500 dark:border-blue-500 active" : "border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300")}
+                      className={"inline-block p-4 " + (openTab === 3 ? "text-color-secundario border-b-2 border-lime-500 rounded-t-lg  active" : "border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300")}
                       onClick={e => {
                         e.preventDefault();
                         setOpenTab(3);
@@ -211,7 +211,7 @@ const FilosofiaPage = () => {
                   <li className="mr-2">
                     <a
                       href="#"
-                      className={"inline-block p-4 " + (openTab === 4 ? "text-blue-600 border-b-2 border-blue-600 rounded-t-lg dark:text-blue-500 dark:border-blue-500 active" : "border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300")}
+                      className={"inline-block p-4 " + (openTab === 4 ? "text-color-secundario border-b-2 border-lime-500 rounded-t-lg  active" : "border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300")}
                       onClick={e => {
                         e.preventDefault();
                         setOpenTab(4);
@@ -223,7 +223,7 @@ const FilosofiaPage = () => {
                   <li className="mr-2">
                     <a
                       href="#"
-                      className={"inline-block p-4 " + (openTab === 5 ? "text-blue-600 border-b-2 border-blue-600 rounded-t-lg dark:text-blue-500 dark:border-blue-500 active" : "border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300")}
+                      className={"inline-block p-4 " + (openTab === 5 ? "text-color-secundario border-b-2 border-lime-500 rounded-t-lg  active" : "border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300")}
                       onClick={e => {
                         e.preventDefault();
                         setOpenTab(5);
@@ -235,7 +235,7 @@ const FilosofiaPage = () => {
                   <li className="mr-2">
                     <a
                       href="#"
-                      className={"inline-block p-4 " + (openTab === 6 ? "text-blue-600 border-b-2 border-blue-600 rounded-t-lg dark:text-blue-500 dark:border-blue-500 active" : "border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300")}
+                      className={"inline-block p-4 " + (openTab === 6 ? "text-color-secundario border-b-2 border-lime-500 rounded-t-lg  active" : "border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300")}
                       onClick={e => {
                         e.preventDefault();
                         setOpenTab(6);
@@ -254,7 +254,7 @@ const FilosofiaPage = () => {
                     </p>
                   </div>
                   <div className="mt-4 flex-col lg:flex-row relative">
-                    <div className="bg-color-lila w-full p-4 lg:p-10 lg:w-2/3 lg:py-10 lg:pl-10 lg:pr-56 shadow-xl">
+                    <div className=" w-full p-4 lg:p-10 lg:w-2/3 lg:py-10 lg:pl-10 lg:pr-56 shadow-xl">
                       <p className="text-gray-700 text-sm text-justify mb-6">
                         En este contexto, la Carrera busca la transformación del modelo de desarrollo económico y social del país en base a la selección, creación, aplicación, integración y administración de tecnologías computacionales innovadoras, que contribuyan a la consecución de la sociedad del conocimiento y la disminuyendo de la brecha digital con condiciones técnicas para la expansión del acceso universal a la información.
                       </p>
@@ -271,7 +271,7 @@ const FilosofiaPage = () => {
               <div className={"flex justify-center p-2 " + (openTab === 2 ? "block" : "hidden")}>
                 <div className="lg:px-20 flex flex-col fade-in py-4">
                   <div className="flex flex-col lg:flex-row gap-x-4 mb-4">
-                    <div className="bg-color-lila w-full p-4 lg:p-10 lg:w-1/2">
+                    <div className=" w-full p-4 lg:p-10 lg:w-1/2">
                       <h1 className="second-title mb-4">Misión</h1>
                       <div className="text-justify">
                         <p className="text-gray-700 text-sm">
@@ -279,7 +279,7 @@ const FilosofiaPage = () => {
                         </p>
                       </div>
                     </div>
-                    <div className="bg-color-lila w-full p-4 lg:p-10 lg:w-1/2">
+                    <div className=" w-full p-4 lg:p-10 lg:w-1/2">
                       <h1 className="second-title mb-4">Visión</h1>
                       <div className="text-justify">
                         <p className="text-gray-700 text-sm">
@@ -288,7 +288,7 @@ const FilosofiaPage = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="bg-color-lila w-full p-4 lg:p-10">
+                  <div className=" w-full p-4 lg:p-10">
                     <h1 className="second-title mb-4">Misión en Régimen Orgánico de Gestión por Procesos (ROGOP) (Art. 55.- Gestión de la formación de grado)</h1>
                     <div className="text-justify">
                       <p className="text-gray-700 text-sm">

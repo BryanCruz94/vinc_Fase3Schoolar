@@ -122,7 +122,7 @@ const HomePage = () => {
   return (
     <>
       <div className="flex flex-col">
-        <section className="relative w-full h-full bg-color-lila flex justify-center overflow-hidden py-20 lg:pt-36 lg:pb-32">
+        <section className="relative w-full h-full bg-lime-500/10 flex justify-center overflow-hidden py-20 lg:pt-36 lg:pb-32">
           <Animate.FadeIn>
             <div className="bubbles-box fade-in">
               <div className="inner">
@@ -142,13 +142,22 @@ const HomePage = () => {
                   <Animate.FadeUp>
                     <div className="bg-gray-100 rounded-lg p-8 w-full md:text-left md:pr-10 shadow-lg fade-in">
                       <h1 className="title mb-4 text-3xl  font-bold " >
-                        Por una comunidad segura
+                        Por Unidades Educativas Seguras
                       </h1>
                       <p className="leading-relaxed mb-6" style={{ textAlign: "justify" }}>
-                        Donde las personas se protegen mutuamente, se apoyan y se preocupan por el bienestar de todos.
+                        Donde los alumnos y autoridades se protegen mutuamente, se apoyan y se preocupan por el bienestar de todos.
                         Únete a nuestra aplicación y forma parte de Seguridad ESPE. Juntos, construyamos una comunidad más segura.
                       </p>
-                 
+                      <p className="text-center">
+                        <a href="https://tusitio.com/ruta/al/apk/tuapp.apk" download className="bg-green-800 text-white font-semibold py-2 px-4 rounded hover:bg-green-600">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="inline w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                          </svg>
+                          Descargar la aplicación
+                        </a>
+                      </p>
+
+
                     </div>
                   </Animate.FadeUp>
                 </div>
@@ -194,19 +203,19 @@ const HomePage = () => {
                     <h1 className="title mb-10 ">¿Cómo funciona?</h1>
                     <ul>
                       <li className="mb-8 flex items-center">
-                        <span className="bg-gray-100 px-5 py-3 rounded-full mr-3 text-blue-800 font-bold text-2xl">1</span>
+                        <span className="bg-gray-100 px-5 py-3 rounded-full mr-3 text-color-espe font-bold text-2xl">1</span>
                         <span className="text-2xl">Descarga la aplicación Seguridad ESPE</span>
                       </li>
                       <li className="mb-8 flex items-center">
-                        <span className="bg-gray-100 px-5 py-3 rounded-full mr-3 text-blue-800 font-bold text-2xl">2</span>
+                        <span className="bg-gray-100 px-5 py-3 rounded-full mr-3 text-color-espe font-bold text-2xl">2</span>
                         <span className="text-2xl">Realiza un reporte y publícalo</span>
                       </li>
                       <li className="mb-8 flex items-center">
-                        <span className="bg-gray-100 px-5 py-3 rounded-full mr-3 text-blue-800 font-bold text-2xl">3</span>
+                      <span className="bg-gray-100 px-5 py-3 rounded-full mr-3 text-color-espe font-bold text-2xl">2</span>
                         <span className="text-2xl">Revisa el reporte publicado en noticias</span>
                       </li>
                       <li className="mb-8 flex items-center">
-                        <span className="bg-gray-100 px-5 py-3 rounded-full mr-3 text-blue-800 font-bold text-2xl">4</span>
+                        <span className="bg-gray-100 px-5 py-3 rounded-full mr-3 text-color-espe font-bold text-2xl">4</span>
                         <span className="text-2xl">Crea grupos personalizados</span>
                       </li>
                     </ul>
@@ -268,7 +277,7 @@ const HomePage = () => {
                     </div>
                   </div>
 
-  
+
                 </div>
               </div>
             </Animate.FadeIn>
@@ -324,7 +333,7 @@ const HomePage = () => {
           </div>
         </section>
 
-   
+
 
         <section className="bg-white h-full w-full flex items-center">
           <div className="container relative py-10 px-10 lg:px-32">

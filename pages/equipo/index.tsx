@@ -108,7 +108,7 @@ const EquipoPage: FC<PropsWithChildren<{}>> = ({}) => {
 </section>
         {/* <section>
           <div className="w-full h-full bg-gray-100 pt-12 lg:pt-32 lg:pb-12 lg:px-20 mb-0">
-            <div className="bg-color-lila w-full h-full">
+            <div className=" w-full h-full">
               <div className="w-full h-full flex flex-col lg:flex-row">
                 <div className="w-full lg:w-1/2 p-10 lg:p-20 flex items-center">
                   <div>
@@ -138,7 +138,7 @@ const EquipoPage: FC<PropsWithChildren<{}>> = ({}) => {
                       <p className="font-bold text-color-primario second-title">Vinicio Leonardo Borja</p>
                     </div>
                     <div className="w-full lg:w-1/2 h-full ">
-                      <div className=" flip-card bg-color-lila">
+                      <div className=" flip-card ">
                         <div className="flip-card-inner">
                           <div className="flip-card-front">
                             <Image
@@ -177,7 +177,7 @@ const EquipoPage: FC<PropsWithChildren<{}>> = ({}) => {
                   </div>
                   <div className="w-full flex flex-col-reverse lg:flex-row h-full lg:h-1/2 overflow-hidden">
                     <div className="w-full lg:w-1/2 h-full">
-                      <div className="flip-card bg-color-lila">
+                      <div className="flip-card ">
                         <div className="flip-card-inner">
                           <div className="flip-card-front flex justify-end">
                             <Image

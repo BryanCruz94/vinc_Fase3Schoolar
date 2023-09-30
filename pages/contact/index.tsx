@@ -229,7 +229,7 @@ const ContactPage = () => {
             </div>
           </div>}
 
-          <div className="w-full h-full px-0 lg:px-10 flex flex-col lg:flex-row justify-end items-center relative overflow-hidden fade-in">
+          {/* <div className="w-full h-full px-0 lg:px-10 flex flex-col lg:flex-row justify-end items-center relative overflow-hidden fade-in">
             <div className="w-full h-full max-h-screen lg:absolute flex justify-center lg:left-0 lg:top-0">
               <Image
                 width={1920}
@@ -239,9 +239,9 @@ const ContactPage = () => {
                 alt="Persona 1" />
             </div>
       
-          </div>
+          </div> */}
 
-          {/*       <section className="bg-color-lila py-10">
+          {/*       <section className=" py-10">
             <div className="container mb-8 px-10 lg:px-32">
               <p className="leading-relaxed mb-4 text-center">
                 Si tienes alguna consulta o necesitas más información sobre la aplicación Seguridad ESPE, estamos aquí para ayudarte. No dudes en ponerte en contacto con nosotros.
@@ -293,7 +293,7 @@ const ContactPage = () => {
             </Animate.FadeIn>
           </section> */}
 
-          <div className="bg-color-lila py-10 w-full h-full">
+          <div className=" py-10 w-full h-full">
             <div className="flex flex-col lg:flex-row w-full items-center px-10">
               <div className="w-full h-full lg:w-2/3">
                 <Animate.FadeIn>

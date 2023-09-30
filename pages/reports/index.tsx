@@ -238,11 +238,11 @@ const ReportsPage = () => {
     return (
       <div className="h-full flex flex-col justify-between rounded-md p-3">
         <div>
-          <h3 className="text-lg font-semibold text-blue-800">{titulo}</h3>
+          <h3 className="text-lg font-semibold text-color-secundario">{titulo}</h3>
           <p className="text-gray-500">{descripcion}</p>
         </div>
         <div className="mt-1">
-          <span className="text-3xl font-bold text-blue-800">{valor}</span>
+          <span className="text-3xl font-bold text-color-espe">{valor}</span>
         </div>
       </div>
     );
@@ -1349,7 +1349,7 @@ const ReportsPage = () => {
                   className="w-full bg-color-primary rounded-lg shadow-lg p-4"
                   style={{ height: "400px" }}
                 >
-                  <h1 className="text-center text-blue-800 text-lg font-semibold mb-2">
+                  <h1 className="text-center text-color-secundario text-lg font-semibold mb-2">
                     Mapa de calor de publicaciones
                   </h1>
                   <Chart
@@ -1364,7 +1364,7 @@ const ReportsPage = () => {
                   className="w-full bg-color-primary rounded-lg shadow-lg p-4"
                   style={{ height: "475px" }}
                 >
-                  <h1 className="text-center text-blue-800 text-lg font-semibold mb-2">
+                  <h1 className="text-center text-color-secundario text-lg font-semibold mb-2">
                     Ubicación exacta de las publicaciones
                   </h1>
                   <Map coordinates={coordenadas} />
@@ -1375,7 +1375,7 @@ const ReportsPage = () => {
                   className="w-full bg-color-primary rounded-lg shadow-lg p-4"
                   style={{ height: "400px" }}
                 >
-                  <h1 className="text-center text-blue-800 text-lg font-semibold mb-2">
+                  <h1 className="text-center text-color-secundario text-lg font-semibold mb-2">
                     Gráfico lineal de emergencias
                   </h1>
                   <Chart
@@ -1390,7 +1390,7 @@ const ReportsPage = () => {
                   className="w-full bg-color-primary rounded-lg shadow-lg p-4"
                   style={{ height: "500px" }}
                 >
-                  <h1 className="text-center text-blue-800 text-lg font-semibold mb-2">
+                  <h1 className="text-center text-color-secundario text-lg font-semibold mb-2">
                     Gráfico de barras
                   </h1>
                   <Chart
@@ -1406,7 +1406,7 @@ const ReportsPage = () => {
             <div className="w-full sm:w-full lg:w-1/2 2xl:w-1/3 relative">
               <div className="sticky top-0 left-0 w-full">
                 <div className="flex flex-col w-full px-8 py-4 bg-color-primary rounded-lg shadow-lg overflow-x-auto">
-                  <h1 className="text-blue-800 text-lg font-semibold mb-2">
+                  <h1 className="text-color-secundario text-lg font-semibold mb-2">
                     Filtros
                   </h1>
                   <div className="w-full flex flex-col-2 lg:flex-row gap-3 mb-2">

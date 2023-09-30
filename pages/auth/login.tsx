@@ -85,11 +85,11 @@ function AuthP() {
     <Layout title="Auth">
       <AuthLayout title="Ingresar">
 
-        <h2 className="text-3xl font-bold leading-tight tracking-tight text-gray-800 md:text-2xl dark:text-slate-700">
+        <h2 className="text-3xl font-bold leading-tight tracking-tight text-gray-800 md:text-2xl dark:text-slate-700 p-0">
           Iniciar sesión
         </h2>
-        <div className="mt-8">
-          <div className="mt-6">
+        <div className="mt-0">
+          <div className="mt-1">
             <form
               action="#"
               method="POST"
@@ -120,7 +120,7 @@ function AuthP() {
               <div className="space-y-1">
                 <label
                   htmlFor="password"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-900"
+                  className="block mb-1 text-sm font-medium text-gray-900 dark:text-gray-900"
                 >
                   {" "}
                   Contraseña{" "}
@@ -138,17 +138,20 @@ function AuthP() {
                 </div>
               </div>
 
+              
+
               <div className="flex items-center justify-between">
-                <div className="text-xs">
-                  Está sección es exclusiva de usuarios administradores por
-                  favor, inicie sesión para acceder a la misma.
+                <div className="text-sm bg-lime-500/10 rounded-lg pt-1 pb-1 mt-0 mb-0 text-center">
+                Esta sección es exclusiva de usuarios administradores. Inicie sesión como administrador para acceder.
                 </div>
               </div>
+
+
 
               <div>
                 <button
                   type="submit"
-                  className="w-full  bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 from-blue-900 bg-blue-800 py-1 text-white shadow "
+                  className="w-full  bg-color-primario hover:bg-primary-700  font-medium rounded-lg text-sm px-5 py-2.5 text-center  text-white shadow "
                 >
                   Iniciar sesión
                 </button>
