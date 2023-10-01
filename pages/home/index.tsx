@@ -149,7 +149,8 @@ const HomePage = () => {
                         Únete a nuestra aplicación y forma parte de Seguridad ESPE. Juntos, construyamos una comunidad más segura.
                       </p>
                       <p className="text-center">
-                        <a href="https://tusitio.com/ruta/al/apk/tuapp.apk" download className="bg-green-800 text-white font-semibold py-2 px-4 rounded hover:bg-green-600">
+                        {/* SE REDIRECCIONA A UNA PÁGINA DE DESCARGA DE CUENTA DE DRIVE DE BRYAN CRUZ */}
+                        <a href="https://drive.google.com/file/d/1Fu8yoUDN_t6WEy3dbZSD0GFG7VbofYv9/view?usp=sharing" download target="_blank" className="bg-green-800 text-white font-semibold py-2 px-4 rounded hover:bg-green-600">
                           <svg xmlns="http://www.w3.org/2000/svg" className="inline w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                           </svg>
@@ -164,7 +165,7 @@ const HomePage = () => {
                 <div className="w-full lg:w-1/2 h-full overflow-hidden">
                   <Animate.MoveIn>
                     <div className="flex h-full justify-center">
-                      <Image src="/seguridadVinculaciontwo/images/phone2.png" width={500} height={500} className="object-contain move-in" alt="logo" />
+                      <Image src="/seguridadVinculaciontwo/images/phone_1_f2.png" width={500} height={500} className="object-contain move-in" alt="logo" />
                     </div>
                   </Animate.MoveIn>
                 </div>
@@ -175,7 +176,7 @@ const HomePage = () => {
 
         <section className="bg-color-secundario pt-16 text-white">
           <div className="flex flex-col w-full overflow-hidden">
-            <Animate.FadeIn>
+            {/* <Animate.FadeIn>
               <div className="text-center mb-12">
                 <h1 className="text-center title">Seguridad ESPE  <br /></h1> <h1 className="text-2xl">Tu solución para la protección ciudadana</h1>
               </div>
@@ -185,7 +186,7 @@ const HomePage = () => {
                   Tu navegador no admite el elemento de video.
                 </video>
               </div>
-            </Animate.FadeIn>
+            </Animate.FadeIn> */}
             <Animate.FadeIn>
               <div className="text-center mb-10">
                 <h1 className="text-center title mb-2">Empieza ya!</h1>
@@ -196,7 +197,7 @@ const HomePage = () => {
             <Animate.MoveIn>
               <div className="w-full flex flex-col justify-center gap-y-10 lg:gap-y-0 items-center lg:flex-row">
                 <div className="w-full lg:w-1/2 flex justify-center lg:justify-end overflow-hidden">
-                  <Image width={550} height={500} src="/seguridadVinculaciontwo/images/phone3.png" className="move-in" alt="phone3" />
+                  <Image width={550} height={500} src="/seguridadVinculaciontwo/images/phone_5_f2.png" className="move-in" alt="phone3" />
                 </div>
                 <div className="w-full lg:w-1/2 h-full flex items-center lg:items-end pb-16 overflow-hidden">
                   <div className="text-start px-10 lg:px-0 h-full w-full move-in">
@@ -204,14 +205,14 @@ const HomePage = () => {
                     <ul>
                       <li className="mb-8 flex items-center">
                         <span className="bg-gray-100 px-5 py-3 rounded-full mr-3 text-color-espe font-bold text-2xl">1</span>
-                        <span className="text-2xl">Descarga la aplicación Seguridad ESPE</span>
+                        <span className="text-2xl">Descarga la aplicación de Schoolar Security</span>
                       </li>
                       <li className="mb-8 flex items-center">
                         <span className="bg-gray-100 px-5 py-3 rounded-full mr-3 text-color-espe font-bold text-2xl">2</span>
                         <span className="text-2xl">Realiza un reporte y publícalo</span>
                       </li>
                       <li className="mb-8 flex items-center">
-                      <span className="bg-gray-100 px-5 py-3 rounded-full mr-3 text-color-espe font-bold text-2xl">2</span>
+                        <span className="bg-gray-100 px-5 py-3 rounded-full mr-3 text-color-espe font-bold text-2xl">3</span>
                         <span className="text-2xl">Revisa el reporte publicado en noticias</span>
                       </li>
                       <li className="mb-8 flex items-center">

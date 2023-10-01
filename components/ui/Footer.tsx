@@ -56,14 +56,14 @@ const Footer = () => {
             <div className="flex flex-col items-center lg:items-start">
             <br/>
             <Image
-                src="/seguridadVinculaciontwo/images/SEblanco.svg"
+                src="/seguridadVinculaciontwo/images/logo_web_blanco.png"
                 width={150}
                 height={30}
                 alt="logo"
                 className="mb- rounded-full"
               />
           
-            <span className="block text-sm text-white  "style={{ fontSize: '13px' }}>María José Párraga Moreira y Vinicio Leonardo Borja Tapia</span>
+            <span className="block text-sm text-white  "style={{ fontSize: '13px' }}>Powered by ESPE-SS | Vinculación Fase II</span>
               <span className="block text-sm text-white"style={{ fontSize: '13px' }}>© 2023 Todos los derechos reservados.</span>
             </div>
            

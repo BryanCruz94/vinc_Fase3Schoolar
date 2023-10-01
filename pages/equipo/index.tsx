@@ -43,7 +43,7 @@ const EquipoPage: FC<PropsWithChildren<{}>> = ({}) => {
           <img alt="team" className="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://res.cloudinary.com/dmkvix7ds/image/upload/v1695635408/LuisCastillo_hg2kj1.png" />
           <div className="flex-grow">
             <h2 className="text-gray-900 title-font font-medium">Luis Castillo</h2>
-            <p className="text-gray-500">Docente de apoyo</p>
+            <p className="text-gray-500">Director de Proyecto</p>
           </div>
         </div>
       </div>

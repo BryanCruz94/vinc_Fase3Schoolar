@@ -43,7 +43,7 @@ function AuthP() {
       setTimeout(() => setShowError(false), 3000);
       return;
     }
-    router.replace("/reports");
+    router.replace("/reports.html");
   };
 
   const [state, dispatch] = useReducer(authReducer, AUTH_INITIAL_STATE);

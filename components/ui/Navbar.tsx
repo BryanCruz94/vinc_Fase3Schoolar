@@ -47,7 +47,7 @@ const Navbar = () => {
               <span className="flex text-white justify-center items-center">
                 {/* <img className="h-8 w-auto mx-1" src="/seguridadVinculaciontwo/images/logo_blanco.png" alt="" /> */}
                 <Image
-                  src="/seguridadVinculaciontwo/images/SEcolores.svg"
+                  src="/seguridadVinculaciontwo/images/logo_web.png"
                   width={200}
                   height={35}
                   alt="logo"

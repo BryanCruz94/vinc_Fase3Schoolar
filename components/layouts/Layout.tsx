@@ -15,7 +15,7 @@ export const Layout: FC<Props> = ({ children, title }) => {
     <>
       <div className="relative">
         <Head>
-          <title>{title || "Seguridad ESPE"}</title>
+          <title>{title || "Schoolar Security"}</title>
           <meta name="author" content="Vinicio Borja y Maria Parraga" />
           <meta
             name="description"
