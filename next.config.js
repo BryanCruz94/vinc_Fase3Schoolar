@@ -12,7 +12,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  // basePath: "/seguridadVinculaciontwo",
+basePath: "/seguridadVinculaciontwo",
 };
 
 module.exports = withTM(nextConfig);

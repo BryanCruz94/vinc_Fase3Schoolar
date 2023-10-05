@@ -297,11 +297,13 @@ const ContactPage = () => {
             <div className="flex flex-col lg:flex-row w-full items-center px-10">
               <div className="w-full h-full lg:w-2/3">
                 <Animate.FadeIn>
+                <div className="w-full h-8">
                   <div className="fade-in">
                     <h1 className="second-title mb-1 text-3xl color-gray-light font-bold">
                       También puedes visitarnos en nuestra sede
                     </h1>
                     <br />
+                  </div>
                   </div>
                   <div className="flex justify-center text-black overflow-hidden" style={{ height: '100%' }}>
                     <iframe className="rounded-lg shadow-xl" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14362.34376615065!2d-79.3174620878782!3d-0.41326645086554714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d53237044f39bb%3A0x24ed753bfe34c98b!2sUniversidad%20de%20las%20Fuerzas%20Armadas%20-%20ESPE%20-%20Santo%20Domingo!5e0!3m2!1sen!2sec!4v1688466546265!5m2!1sen!2sec"
@@ -310,7 +312,7 @@ const ContactPage = () => {
                 </Animate.FadeIn>
                 <div className="px-4 mt-8">
                   <p className="leading-relaxed mb-4 text-justify">
-                    Si tienes alguna consulta o necesitas más información sobre la aplicación Seguridad ESPE, estamos aquí para ayudarte. No dudes en ponerte en contacto con nosotros.
+                    Si tienes alguna consulta o necesitas más información sobre la aplicación Schoolar Security, estamos aquí para ayudarte. No dudes en ponerte en contacto con nosotros.
                   </p>
                 </div>
               </div>
