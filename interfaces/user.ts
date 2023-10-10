@@ -22,5 +22,6 @@ export interface IUser {
     isSalasPendiente:          boolean;
     isNotificacionesPendiente: boolean;
     tokenApp:                  string;
-    uid:                       string;      
+    uid:                       string;     
+    unidadEducativa:           string; 
 }
