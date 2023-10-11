@@ -257,7 +257,7 @@ const HomePage = () => {
                       </div>
                       <div className="flex flex-row">
                         <div className="w-1/5 flex justify-center">
-                          <img className="mb-1" width="55" height="55" src="/seguridadVinculaciontwo/images/reporte.png" />
+                          <img className="mb-1" width="55" height="55" src="/seguridadVinculaciontwo/images/logo_noticias.png" />
                         </div>
                         <div className="w-4/5 px-2">
                           <span>
@@ -267,7 +267,7 @@ const HomePage = () => {
                       </div>
                       <div className="flex flex-row">
                         <div className="w-1/5 flex justify-center">
-                          <img className="mb-1" width="55" height="55" src="seg/images/chat-inmediato.jpg" />
+                          <img className="mb-1" width="55" height="55" src="/seguridadVinculaciontwo/images/logo_grupos.png" />
                         </div>
                         <div className="w-4/5 px-2">
                           <span>
@@ -340,13 +340,11 @@ const HomePage = () => {
           <div className="flex flex-wrap mt-5 ml-2 mr-2 text-center md:ml-5 md:mr-5 text-justify">
             <div className="w-full md:w-1/2 lg:w-1/2 p-2 md:p-4">
               <p>
-                En la Universidad de las Fuerzas Armadas ESPE, un grupo de docentes y estudiantes que trabajaban en sus tesis se preocuparon por la seguridad de la comunidad de Luz de América. Decidieron crear una aplicación llamada "Seguridad ESPE" que permitiera a los usuarios reportar incidentes de seguridad en tiempo real. La aplicación se desarrolló después de realizar encuestas a la comunidad para comprender las necesidades de la misma.
-              </p>
+              En la Universidad de las Fuerzas Armadas ESPE sede Santo Domingo, un grupo de docentes y los tesistas Vinicio Borja y Maria José Párraga expresaron su preocupación por la seguridad de la comunidad de Luz de América. Después de llevar a cabo encuestas en dicha comunidad con el objetivo de identificar sus necesidades técnicas, tomaron la decisión de desarrollar una aplicación denominada "Seguridad ESPE". Esta aplicación tiene como finalidad permitir a los usuarios reportar incidentes de seguridad en tiempo real a través de una plataforma web y una aplicación móvil.</p>
             </div>
             <div className="w-full md:w-1/2 lg:w-1/2 p-2 md:p-4">
               <p>
-                Con el tiempo, Seguridad ESPE se convirtió en una herramienta esencial para mejorar la seguridad y fortalecer la comunidad. Partiendo de la aplicación previamente desarrollada por los tesistas, el equipo de Vinculación de la Fase II llevó a cabo un proyecto para adaptar y expandir aún más esta solución. Su enfoque estaba dirigido específicamente a las instituciones educativas de las parroquias Puerto Limón y El Esfuerzo.
-              </p>
+              Con el tiempo, Seguridad ESPE se ha convertido en una herramienta esencial para mejorar la seguridad y fortalecer la comunidad. Basándose en las aplicaciones desarrolladas por los tesistas, se llevó a cabo la Fase II del proyecto de Vinculación con la Sociedad, denominado "IMPLEMENTACIÓN DE APLICACIONES WEB Y MÓVILES PARA LA GESTIÓN DE EMERGENCIAS COMUNITARIAS EN LA PROVINCIA DE SANTO DOMINGO DE LOS TSÁCHILAS". En esta ocasión, el enfoque se dirigió hacia las Unidades Educativas de las parroquias Puerto Limón y El Esfuerzo.</p>
             </div>
             <div className="w-full md:w-1/2 lg:w-1/2 p-2 md:p-4">
               <img src="/SeguridadESPE/images/menusession2.webp" width={500} height={500} alt="Primera foto" className="mx-auto" />

@@ -96,15 +96,15 @@ function AuthP() {
               <p className="text-lg text-gray-800 dark:text-gray-400">
                 ¡Bienvenido a Schoolar Security - Reportes!
               </p>
-              <p className="mt-3 text-md text-gray-600 dark:text-gray-400">
+              <p className="mt-3 text-md text-gray-700 dark:text-gray-400">
                 Nuestro sistema de inicio de sesión te permite acceder a los
                 reportes de incidentes de las Unidades Educativas. Para
                 continuar, por favor, ingresa tu correo electrónico de
-                administrador registrado a continuación. Esto te permitirá
+                administrador registrado. Esto te permitirá
                 acceder a las funciones de gestión de incidentes.
               </p>
-              <p className="mt-3 text-md text-gray-600 dark:text-gray-400">
-                En caso de que no dispongas de un correo electrónico de
+              <p className="mt-3 text-md text-gray-700 dark:text-gray-400">
+                En caso que no dispongas de un correo electrónico de
                 administrador o si perteneces a una de las unidades educativas y
                 necesitas acceso, por favor, comunícate con nosotros a través
                 del siguiente correo electrónico de contacto:{" "}
@@ -114,7 +114,8 @@ function AuthP() {
                 >
                   lacastillo12@espe.edu.ec
                 </a>
-                . Estaremos encantados de ayudarte a obtener acceso a los
+                . Solicitando una cuenta de administrador con su respectiva justificación.
+                Estaremos encantados de ayudarte a obtener acceso a los
                 reportes obtenidos sobre los incidentes.
               </p>
             </div>
