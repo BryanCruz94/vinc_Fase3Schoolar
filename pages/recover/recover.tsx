@@ -73,7 +73,7 @@ function RecoverPage() {
         timer: 4000, // 3000 milisegundos (3 segundos)
         timerProgressBar: true, // Barra de progreso del temporizador
         toast: true, // Mostrar como notificación de tostada
-        position: "top-end", // Posición en la parte superior derecha
+        position: "bottom-end", // Posición de la notificación
         showConfirmButton: false, // No mostrar el botón "Ok"
       }).then((result) => {
         // Puedes agregar lógica adicional después de que la notificación se cierre
