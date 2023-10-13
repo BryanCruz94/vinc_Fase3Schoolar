@@ -278,7 +278,7 @@ const HomePage = () => {
                     </div>
                   </div>
                   <div className="flex flex-col w-full lg:w-1/2 text-justify">
-                    <h1 className="mb-6 md:mb-6 lg:mb-8 title">
+                    <h1 className="mb-6 md:mb-6 lg:mb-8 title text-center">
                       Impactos esperados
                     </h1>
                     <div className="grid grid-cols-1 gap-4">
@@ -298,7 +298,7 @@ const HomePage = () => {
                         </div>
                         <div className="w-4/5 px-2">
                           <span>
-                            Enviar a la comunidad reportes estadísticos de seguridad relevantes, que incluyen información sobre las emergencias más frecuentes y sectores con mayor incidencia.
+                          Enviar estadísticas de seguridad a la comunidad sobre emergencias y sectores destacados.
                           </span>
                         </div>
                       </div>
@@ -340,7 +340,7 @@ const HomePage = () => {
           <div className="flex flex-wrap mt-5 ml-2 mr-2 text-center md:ml-5 md:mr-5 text-justify">
             <div className="w-full md:w-1/2 lg:w-1/2 p-2 md:p-4">
               <p>
-              En la Universidad de las Fuerzas Armadas ESPE sede Santo Domingo, un grupo de docentes y los tesistas Vinicio Borja y Maria José Párraga expresaron su preocupación por la seguridad de la comunidad de Luz de América. Después de llevar a cabo encuestas en dicha comunidad con el objetivo de identificar sus necesidades técnicas, tomaron la decisión de desarrollar una aplicación denominada "Seguridad ESPE". Esta aplicación tiene como finalidad permitir a los usuarios reportar incidentes de seguridad en tiempo real a través de una plataforma web y una aplicación móvil.</p>
+              En la Universidad de las Fuerzas Armadas ESPE Sede Santo Domingo, un grupo de docentes y los tesistas Vinicio Borja y Maria José Párraga expresaron su preocupación por la seguridad de la comunidad de Luz de América. Después de llevar a cabo encuestas en dicha comunidad con el objetivo de identificar sus necesidades técnicas, tomaron la decisión de desarrollar una aplicación denominada "Seguridad ESPE". Esta aplicación tiene como finalidad permitir a los usuarios reportar incidentes de seguridad en tiempo real a través de una plataforma web y una aplicación móvil.</p>
             </div>
             <div className="w-full md:w-1/2 lg:w-1/2 p-2 md:p-4">
               <p>
