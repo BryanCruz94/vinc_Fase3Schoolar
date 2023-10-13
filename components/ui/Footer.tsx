@@ -8,11 +8,7 @@ const Footer = () => {
       <footer className="w-full bg-color-espe py-2 text-white shadow ml-0 mp-5">
   <div className="w-full max-w-screen-xl mx-auto py-2 px-4 md:py-1">
     <div className="flex flex-col items-center justify-center lg:justify-end lg:flex-row gap-3 lg:gap-0 mt-2 mb-3">
-      <div className='flex gap-3'>
-        <Link href="https://espe.edu.ec" className="flex items-center">
-          <Image width={200} height={40} src="/seguridadVinculaciontwo/images/ESPEtransp.png" className="mr-3" alt="ESPE Logo" />
-        </Link>
-      </div>
+     
       <ul className="flex flex-wrap items-center mb-2 text-sm font-medium text-white sm:mb-0 dark:text-gray-400">
         <li>
           <Link href="/filosofia" className="mr-3 hover:underline md:mr-4 text-white">Filosofía</Link>
@@ -30,13 +26,10 @@ const Footer = () => {
     </div>
     <hr className="my-2 border-white sm:mx-auto lg:my-1" />
     <div className='flex flex-col lg:flex-row justify-between gap-3 my-2'>
-      <div className="flex items-center">
-        <Image
-          src="/seguridadVinculaciontwo/images/ESPEtransp.png"
-          width={100}
-          height={20}
-          alt="logo"
-        />
+    <div className='flex gap-3'>
+        <Link href="https://espe.edu.ec" className="flex items-center">
+          <Image width={200} height={40} src="/seguridadVinculaciontwo/images/ESPEtransp.png" className="mr-3" alt="ESPE Logo" />
+        </Link>
       </div>
       <div className="flex flex-col items-center lg:items-start">
         <ul className="text-xs text-white">
