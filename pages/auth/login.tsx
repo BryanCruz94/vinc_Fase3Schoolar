@@ -82,7 +82,7 @@ function AuthP() {
   return (
     <>
       <br />
-      <Layout title="Auth">
+      <Layout title="Iniciar Sesión">
         <div className="flex flex-col lg:flex-row">
           {/* Div para información sobre la página en la parte izquierda */}
           <div className="lg:w-1/2 pr-2 mb-5 lg:mb-0">

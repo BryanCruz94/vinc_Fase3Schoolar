@@ -296,6 +296,7 @@ const ContactPage = () => {
           <div className=" py-10 w-full h-full">
             <div className="flex flex-col lg:flex-row w-full items-center px-10">
               <div className="w-full h-full lg:w-2/3">
+                <br />
                 <Animate.FadeIn>
                 <div className="w-full h-8">
                   <div className="fade-in">
