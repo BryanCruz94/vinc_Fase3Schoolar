@@ -83,6 +83,23 @@ function RecoverPage() {
         }
       });
     } catch (error) {
+      Swal.fire({
+        title: "Error",
+        text: "El correo electrónico ingresado no se encuentra registrado.",
+        icon: "error",
+        confirmButtonText: "Ok",
+        timer: 4000, // 3000 milisegundos (3 segundos)
+        timerProgressBar: true, // Barra de progreso del temporizador
+        toast: true, // Mostrar como notificación de tostada
+        position: "bottom-end", // Posición de la notificación
+        showConfirmButton: false, // No mostrar el botón "Ok"
+      }).then((result) => {
+        // Puedes agregar lógica adicional después de que la notificación se cierre
+        if (result.dismiss === Swal.DismissReason.timer) {
+          console.log("Notificación cerrada por temporizador");
+          // Aquí puedes realizar acciones adicionales si es necesario
+        }
+      });
       console.log(error);
     }
     // En lugar de asignar un valor directamente a formulario.email, puedes usar la función handleChange para restablecer el campo del formulario
