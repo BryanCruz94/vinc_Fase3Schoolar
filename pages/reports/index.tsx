@@ -363,32 +363,32 @@ const ReportsPage = () => {
     await generearGraficos();
   };
 
-  const cambiarUnidadEducativa = async (event: {
-    target: { value: React.SetStateAction<string> };
-  }) => {
+  const cambiarUnidadEducativa = async (event: { target: any }) => {
+    let selectedValue = event.target.value;
+    debugger;
     if (state.user?.role === "ADMIN_ROLE") {
-      await setSelectedUnidadEducativa(selectedUnidadEducativa);
+      await setSelectedUnidadEducativa(selectedValue);
     }
 
     if (state.user?.role === "SUPER_ADMIN_ROLE") {
-      await setSelectedUnidadEducativa(event.target.value);
+      // debugger;
+      await setSelectedUnidadEducativa(selectedValue);
     }
     // await setSelectedUnidadEducativa(selectedCiudad);
     await obtenerEmergencias(selectedCiudad, selectedBarrio);
     await obtenerAnios(selectedCiudad, selectedBarrio, selectedAnio);
     console.log(selectedUnidadEducativa);
 
-    await generearGraficos();
+    await generearGraficos(selectedValue);
   };
 
   const cambiarUnidadEducativaV2 = async (data: any) => {
-     setSelectedUnidadEducativa(data);
-     
+    setSelectedUnidadEducativa(data);
 
     // await setSelectedUnidadEducativa(selectedCiudad);
     await obtenerEmergencias(selectedCiudad, selectedBarrio);
     await obtenerAnios(selectedCiudad, selectedBarrio, selectedAnio);
- 
+
     console.log(selectedUnidadEducativa);
 
     await obtenerMapaCalor(
@@ -434,7 +434,6 @@ const ReportsPage = () => {
       selectedHoraFin.$d,
       data
     );
-    debugger;
   };
 
   useEffect(() => {
@@ -471,8 +470,7 @@ const ReportsPage = () => {
             await setSelectedUnidadEducativa(unidadEducativa[0]);
             console.log(unidadEducativa[0]);
             console.log("unidadEducativa[0]");
-            debugger;
-        
+            // debugger;
           } else if (state.user.role === "SUPER_ADMIN_ROLE") {
             // Traer todas las unidades educativas si el usuario tiene rol SUPER_ADMIN_ROLE
             setUnidadEducativa(response.data.data);
@@ -512,6 +510,7 @@ const ReportsPage = () => {
       .post("http://192.188.58.82:3000/api/v2/reportes/obtenerEmergencias", {
         ciudad,
         barrio,
+        unidadEducativa: state.user?.role === "ADMIN_ROLE" ? state.user?.unidadEducativa : "",
       })
       .then((response) => {
         setEmergencias(response.data.data);
@@ -565,9 +564,9 @@ const ReportsPage = () => {
   };
 
   /* TODO: Graficas */
-  const generearGraficos = async () => {
-    debugger;
-
+  const generearGraficos = async (unidadEducativaV2: any = "") => {
+    // debugger;
+    console.log(unidadEducativaV2);
     console.log(`  selectedCiudad,
     selectedBarrio,
     selectedEmergencia,
@@ -585,7 +584,7 @@ const ReportsPage = () => {
       selectedDateRange.endDate,
       selectedHoraInicio.$d,
       selectedHoraFin.$d,
-      selectedUnidadEducativa
+      unidadEducativaV2
     );
 
     debugger;
@@ -598,9 +597,9 @@ const ReportsPage = () => {
       selectedDateRange.endDate,
       selectedHoraInicio.$d,
       selectedHoraFin.$d,
-      selectedUnidadEducativa
+      unidadEducativaV2
     );
-
+    // debugger;
     await obtenerReporteBarras(
       selectedCiudad,
       selectedBarrio,
@@ -609,7 +608,7 @@ const ReportsPage = () => {
       selectedDateRange.endDate,
       selectedHoraInicio.$d,
       selectedHoraFin.$d,
-      selectedUnidadEducativa
+      unidadEducativaV2
     );
 
     await obtenerReportPastel(
@@ -620,7 +619,7 @@ const ReportsPage = () => {
       selectedDateRange.endDate,
       selectedHoraInicio.$d,
       selectedHoraFin.$d,
-      selectedUnidadEducativa
+      unidadEducativaV2
     );
 
     await obtenerCoordenadas(
@@ -631,7 +630,7 @@ const ReportsPage = () => {
       selectedDateRange.endDate,
       selectedHoraInicio.$d,
       selectedHoraFin.$d,
-      selectedUnidadEducativa
+      unidadEducativaV2
     );
   };
 
@@ -654,7 +653,7 @@ const ReportsPage = () => {
         fechaFin,
         horaInicio,
         horaFin,
-        unidadEducativa,
+        unidadEducativa: state.user?.role === "ADMIN_ROLE" ? state.user?.unidadEducativa : unidadEducativa,
       })
       .then((response) => {
         setDataBarrasNumber(response.data.data);
@@ -722,7 +721,7 @@ const ReportsPage = () => {
         fechaFin,
         horaInicio,
         horaFin,
-        unidadEducativa,
+        unidadEducativa: state.user?.role === "ADMIN_ROLE" ? state.user?.unidadEducativa : unidadEducativa,
       })
       .then((response) => {
         /* setDataBarrasNumber(response.data.data); */
@@ -1054,7 +1053,7 @@ const ReportsPage = () => {
         fechaFin,
         horaInicio,
         horaFin,
-        unidadEducativa,
+        unidadEducativa: state.user?.role === "ADMIN_ROLE" ? state.user?.unidadEducativa : unidadEducativa,
       })
       .then((response) => {
         const tooltip: any = response.data.data.tooltip;
@@ -1186,7 +1185,7 @@ const ReportsPage = () => {
     horaFin: any,
     unidadEducativa: any
   ) => {
-    debugger;
+    // debugger;
     axios
       .post("http://192.188.58.82:3000/api/v2/reportes/obtenerCoordenadas", {
         ciudad,
@@ -1609,7 +1608,6 @@ const ReportsPage = () => {
                         onChange={cambiarUnidadEducativa}
                         className="w-full py-2 rounded-md border-0 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600  sm:text-sm sm:leading-6"
                       >
-                        <option >SELECCIONAR UNIDAD EDUCATIVA</option>
                         {unidadesEducativas.map((unidad: any) => (
                           <option key={unidad} value={unidad}>
                             {unidad}
