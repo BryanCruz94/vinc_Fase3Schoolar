@@ -17,6 +17,7 @@ const AUTH_INITIAL_STATE: AuthState = {
 const baseUrl = "http://192.188.58.82:3000/api/v2";
 import { AuthContext, AuthState, authReducer } from "@/context/auth";
 import Image from "next/image";
+import Swal from "sweetalert2";
 interface FormValues {
   email: string;
   password: string;
@@ -41,6 +42,24 @@ function AuthP() {
     if (!isValidLogin) {
       setShowError(true);
       setTimeout(() => setShowError(false), 3000);
+      console.log('credenciales incorrectas');
+      Swal.fire({
+        title: "Error",
+        text: "Credencias Incorrectas, verifique usuario y/o contraseña.",
+        icon: "error",
+        confirmButtonText: "Ok",
+        timer: 4000, // 3000 milisegundos (3 segundos)
+        timerProgressBar: true, // Barra de progreso del temporizador
+        toast: true, // Mostrar como notificación de tostada
+        position: "center", // Ubicación de la notificación
+        showConfirmButton: false, // No mostrar el botón "Ok"
+      }).then((result) => {
+        // Puedes agregar lógica adicional después de que la notificación se cierre
+        if (result.dismiss === Swal.DismissReason.timer) {
+          console.log("Notificación cerrada por temporizador");
+          // Aquí puedes realizar acciones adicionales si es necesario
+        }
+      });
       return;
     }
     router.replace("/reports.html");

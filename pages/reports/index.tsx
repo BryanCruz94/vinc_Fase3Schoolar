@@ -86,6 +86,7 @@ const ReportsPage = () => {
   const [dataUser, setDataUser] = useState({
     role: "dg",
     unidadEducativa: "",
+    nombre: "",
   });
 
   useEffect(() => {
@@ -107,12 +108,13 @@ const ReportsPage = () => {
       const newDataUser = {
         role: usuario.role,
         unidadEducativa: usuario.unidadEducativa,
+        nombre: usuario.nombre,
       };
 
       Cookies.set("token", token);
       // Actualizar dataUser.role con el nuevo rol de usuario.role
       setDataUser(newDataUser);
-      
+
       console.log("dataUser", dataUser);
       console.log("Solo ROL", newDataUser.role);
       dispatch({ type: "[Auth] - Login", payload: usuario });
@@ -1284,7 +1286,7 @@ const ReportsPage = () => {
             // Abrir una nueva ventana del navegador con la URL del PDF
             // Descargar el archivo
             const a = document.createElement("a");
-            a.download = "archivo.pdf";
+            a.download = "Reporte_IncidentesUE.pdf";
             a.href = url;
             a.click();
           })
@@ -1428,44 +1430,51 @@ const ReportsPage = () => {
             <h1 className="title text-3xl color-gray-light font-bold">
               Analítica de Incidentes Unidades Educativas
             </h1>
+            <div className="fade-in">
+            <h5 className="text-lg ml-2  color-gray-light font-semibold">
+              Bienvenido/a {dataUser.nombre} de la Unidad Educativa {dataUser.unidadEducativa}
+            </h5>
           </div>
+          </div>
+          
+          
 
           {/* AQUI EMPIEZAN LAS TARJETAS INFORMATIVAS */}
           {isLoggedIn && dataUser.role === 'SUPER_ADMIN_ROLE' && (
-          <div className="flex flex-col lg:flex-row w-full gap-2 lg:gap-6 mb-4">
-            <div className="w-full xl:w-1/4 bg-color-primary rounded-lg px-4 shadow-lg flex items-center">
-              <ReporteCard
-                titulo="Usuarios registrados"
-                descripcion="Total de usuarios registrados"
-                valor={usuariosRegistros}
-              />
-              <UserGroupIcon className="h-16 w-16 text-color-secundario ml-2" />
+            <div className="flex flex-col lg:flex-row w-full gap-2 lg:gap-6 mb-4">
+              <div className="w-full xl:w-1/4 bg-color-primary rounded-lg px-4 shadow-lg flex items-center">
+                <ReporteCard
+                  titulo="Usuarios registrados"
+                  descripcion="Total de usuarios registrados"
+                  valor={usuariosRegistros}
+                />
+                <UserGroupIcon className="h-16 w-16 text-color-secundario ml-2" />
+              </div>
+              <div className="w-full xl:w-1/4 bg-color-primary rounded-lg px-4 shadow-lg flex items-center">
+                <ReporteCard
+                  titulo="Publicaciones registradas"
+                  descripcion="Total de publicaciones registradas"
+                  valor={publicacionesRegistradas}
+                />
+                <DocumentCheckIcon className="h-12 w-16 text-color-secundario ml-2" />
+              </div>
+              <div className="w-full xl:w-1/4 bg-color-primary rounded-lg px-4 shadow-lg flex items-center">
+                <ReporteCard
+                  titulo="Publicaciones del mes"
+                  descripcion="Total de publicaciones hechas en este mes"
+                  valor={publicacionesDelMes}
+                />
+                <DocumentChartBarIcon className="h-16 w-16 text-color-secundario ml-2" />
+              </div>
+              <div className="w-full xl:w-1/4 bg-color-primary rounded-lg px-4 shadow-lg flex items-center">
+                <ReporteCard
+                  titulo="Publicaciones del día"
+                  descripcion="Total de publicaciones hechas el día de hoy"
+                  valor={publicacionesDelDia}
+                />
+                <ClipboardDocumentListIcon className="h-16 w-16 text-color-secundario ml-2" />
+              </div>
             </div>
-            <div className="w-full xl:w-1/4 bg-color-primary rounded-lg px-4 shadow-lg flex items-center">
-              <ReporteCard
-                titulo="Publicaciones registradas"
-                descripcion="Total de publicaciones registradas"
-                valor={publicacionesRegistradas}
-              />
-              <DocumentCheckIcon className="h-12 w-16 text-color-secundario ml-2" />
-            </div>
-            <div className="w-full xl:w-1/4 bg-color-primary rounded-lg px-4 shadow-lg flex items-center">
-              <ReporteCard
-                titulo="Publicaciones del mes"
-                descripcion="Total de publicaciones hechas en este mes"
-                valor={publicacionesDelMes}
-              />
-              <DocumentChartBarIcon className="h-16 w-16 text-color-secundario ml-2" />
-            </div>
-            <div className="w-full xl:w-1/4 bg-color-primary rounded-lg px-4 shadow-lg flex items-center">
-              <ReporteCard
-                titulo="Publicaciones del día"
-                descripcion="Total de publicaciones hechas el día de hoy"
-                valor={publicacionesDelDia}
-              />
-              <ClipboardDocumentListIcon className="h-16 w-16 text-color-secundario ml-2" />
-            </div>
-          </div>
           )}
 
           {/* AQUI TERMINAN LAS TARJETAS INFORMATIVAS */}

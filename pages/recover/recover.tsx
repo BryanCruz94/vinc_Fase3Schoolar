@@ -37,15 +37,14 @@ function RecoverPage() {
     if (!formulario.email) {
       return;
     }
-
-    //Si no es un correo electrónico válido, no se envía la petición con un operador ternario
+  
     if (!/\S+@\S+\.\S+/.test(formulario.email)) {
       return;
     }
+  
     try {
-      // router.post("/recover-password", async (req, res) => {
-      await axios.post(
-        `${baseUrl}/email/recover-password`,
+      const response = await axios.post(
+        `${baseUrl}/email/recover-password-web`,
         {
           email: formulario.email,
         },
@@ -55,54 +54,54 @@ function RecoverPage() {
           },
         }
       );
-      formulario.email = "";
-      handleChange({
-        target: {
-          name: "email",
-          value: "",
-          type: "text", // add any other properties that are required by the event object
-        },
-      } as React.ChangeEvent<HTMLInputElement>);
-
-      //   Ayudame con  mensaje de Swal from 'sweetalert2' que diga que se envio el correo
-      Swal.fire({
-        title: "Correo enviado",
-        text: "Muy pronto un supervisor se pondrá en contacto contigo para restablecer tu contraseña",
-        icon: "success",
-        confirmButtonText: "Ok",
-        timer: 4000, // 3000 milisegundos (3 segundos)
-        timerProgressBar: true, // Barra de progreso del temporizador
-        toast: true, // Mostrar como notificación de tostada
-        position: "bottom-end", // Posición de la notificación
-        showConfirmButton: false, // No mostrar el botón "Ok"
-      }).then((result) => {
-        // Puedes agregar lógica adicional después de que la notificación se cierre
-        if (result.dismiss === Swal.DismissReason.timer) {
-          console.log("Notificación cerrada por temporizador");
-          // Aquí puedes realizar acciones adicionales si es necesario
-        }
-      });
+  
+      // Verifica el código de estado de la respuesta HTTP
+      if (response.status === 200) {
+        // Si el código es 200, el correo se envió con éxito
+        console.log('Correo enviado');
+        console.log(response.status);
+        Swal.fire({
+          title: "Correo enviado",
+          text: "Muy pronto un supervisor se pondrá en contacto contigo para restablecer tu contraseña.",
+          icon: "success",
+          confirmButtonText: "Ok",
+          timer: 4000,
+          timerProgressBar: true,
+          toast: true,
+          position: "center",
+          showConfirmButton: false,
+        });
+      } else if (response.status === 403) {
+        // Si el código es 403, significa que el usuario no es un administrador
+        console.log('Usario no administrador');
+        console.log(response.status);
+        Swal.fire({
+          title: "Error",
+          text: "Solo los usuarios administradores pueden modificar contraseñas",
+          icon: "error",
+          confirmButtonText: "Ok",
+          timer: 4000,
+          timerProgressBar: true,
+          toast: true,
+          position: "center",
+          showConfirmButton: false,
+        });
+      }
     } catch (error) {
+      // Si ocurre un error en la solicitud, muestra un mensaje de error genérico
       Swal.fire({
         title: "Error",
-        text: "El correo electrónico ingresado no se encuentra registrado.",
+        text: "El correo electrónico no se encuentra registrado o no es un correo de administrador.",
         icon: "error",
         confirmButtonText: "Ok",
-        timer: 4000, // 3000 milisegundos (3 segundos)
-        timerProgressBar: true, // Barra de progreso del temporizador
-        toast: true, // Mostrar como notificación de tostada
-        position: "bottom-end", // Posición de la notificación
-        showConfirmButton: false, // No mostrar el botón "Ok"
-      }).then((result) => {
-        // Puedes agregar lógica adicional después de que la notificación se cierre
-        if (result.dismiss === Swal.DismissReason.timer) {
-          console.log("Notificación cerrada por temporizador");
-          // Aquí puedes realizar acciones adicionales si es necesario
-        }
+        timer: 4500,
+        timerProgressBar: true,
+        toast: true,
+        position: "center",
+        showConfirmButton: false,
       });
       console.log(error);
     }
-    // En lugar de asignar un valor directamente a formulario.email, puedes usar la función handleChange para restablecer el campo del formulario
   };
 
   const [state, dispatch] = useReducer(authReducer, AUTH_INITIAL_STATE);
