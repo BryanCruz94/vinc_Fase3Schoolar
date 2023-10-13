@@ -44,6 +44,7 @@ import { DateRangePicker } from "react-date-range";
 import { AuthContext, AuthState, authReducer } from "@/context/auth";
 import { useRouter } from "next/router";
 import Cookies from "js-cookie";
+import { log } from "console";
 
 const AUTH_INITIAL_STATE: AuthState = {
   isLoggedIn: false,
@@ -102,15 +103,18 @@ const ReportsPage = () => {
       const { token, usuario } = data;
       console.log(" console.log(token, usuario.unidadEducativa);");
 
-      console.log(token, usuario.unidadEducativa);
+      console.log(token, usuario.unidadEducativa, usuario.role, 'HOLA MUNDO');
       const newDataUser = {
         role: usuario.role,
         unidadEducativa: usuario.unidadEducativa,
       };
 
-      console.log(token, usuario);
       Cookies.set("token", token);
-      console.log(dataUser, "dataUser");
+      // Actualizar dataUser.role con el nuevo rol de usuario.role
+      setDataUser(newDataUser);
+      
+      console.log("dataUser", dataUser);
+      console.log("Solo ROL", newDataUser.role);
       dispatch({ type: "[Auth] - Login", payload: usuario });
       setLoading(false);
     } catch (error) {
@@ -1426,6 +1430,9 @@ const ReportsPage = () => {
               Analítica de Incidentes Unidades Educativas
             </h1>
           </div>
+
+          {/* AQUI EMPIEZAN LAS TARJETAS INFORMATIVAS */}
+          {isLoggedIn && dataUser.role === 'SUPER_ADMIN_ROLE' && (
           <div className="flex flex-col lg:flex-row w-full gap-2 lg:gap-6 mb-4">
             <div className="w-full xl:w-1/4 bg-color-primary rounded-lg px-4 shadow-lg flex items-center">
               <ReporteCard
@@ -1460,6 +1467,11 @@ const ReportsPage = () => {
               <ClipboardDocumentListIcon className="h-16 w-16 text-color-secundario ml-2" />
             </div>
           </div>
+          )}
+
+          {/* AQUI TERMINAN LAS TARJETAS INFORMATIVAS */}
+
+
           <div className="w-full flex flex-col-reverse lg:flex-row gap-6">
             <div className="w-full sm:w-full lg:w-1/2 2xl:w-2/3">
               <div className="flex flex-col lg:flex-row w-full gap-2 lg:gap-6 mb-4">
