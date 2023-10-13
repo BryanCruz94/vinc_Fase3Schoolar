@@ -193,7 +193,7 @@ function RecoverPage() {
                         className="bblock mb-2 text-xs font-medium text-gray-900 dark:text-gray-900"
                       >
                         ¿Olvidaste tu contraseña? Por favor, introduce tu
-                        dirección de correo electrónico. Muy pronyo un
+                        dirección de correo electrónico. Muy pronto un
                         supervisor se pondrá en contacto contigo para
                         restablecer tu contraseña.
                       </label>

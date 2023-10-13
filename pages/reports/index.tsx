@@ -683,7 +683,7 @@ const ReportsPage = () => {
             curve: "straight",
           },
           title: {
-            text: "Gráfico de lineal de emergencias",
+            text: "Gráfico lineal de emergencias",
             align: "left",
           },
           grid: {

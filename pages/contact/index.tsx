@@ -297,7 +297,7 @@ const ContactPage = () => {
             <div className="flex flex-col lg:flex-row w-full items-center px-10">
               <div className="w-full h-full lg:w-2/3">
                 <Animate.FadeIn>
-                <div className="w-full h-8">
+                <div className="w-full h-20">
                   <div className="fade-in">
                     <h1 className="second-title mb-1 text-3xl color-gray-light font-bold">
                       También puedes visitarnos en nuestra sede
@@ -334,7 +334,7 @@ const ContactPage = () => {
                       <div className="text-center">
                         <p className="text-color-secundario font-bold">Teléfono convencional</p>
                         <p className="text-gray-700 text-sm">(02) 272-2246</p>
-                        <p className="text-gray-700 text-sm">ESPE sede Santo Domingo</p>
+                        <p className="text-gray-700 text-sm">ESPE Sede Santo Domingo</p>
                       </div>
                     </div>
                     <div className="flex flex-col w-full items-center bg-white rounded-lg p-6 shadow">

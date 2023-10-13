@@ -33,7 +33,7 @@ const Footer = () => {
       </div>
       <div className="flex flex-col items-center lg:items-start">
         <ul className="text-xs text-white">
-          <li><i className="fas fa-map text-lg" style={{ fontSize: '11px' }}></i> Vía Santo Domingo - Via Quevedo Km. 24</li>
+          <li><i className="fas fa-map text-lg" style={{ fontSize: '11px' }}></i> Vía Santo Domingo - Vía Quevedo Km. 24</li>
           <li><i className="fas fa-map-marker text-lg" style={{ fontSize: '11px' }}></i> Hda. Zoila Luz Avenida Quevedo 3-703-914, Santo Domingo 230153</li>
           <li><i className="fas fa-phone text-lg" style={{ fontSize: '11px' }}></i> Teléfono: (+593) 22722-246</li>
         </ul>

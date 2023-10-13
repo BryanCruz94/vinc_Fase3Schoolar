@@ -67,7 +67,7 @@ const Navbar = () => {
             </button>
           </div>
           <Popover.Group className="hidden lg:flex lg:gap-x-12">
-            <Link href={"/"} className="text-sm leading-6 text-color-primario">
+            <Link href={"/"} className="text-sm ">
               Inicio
             </Link>
             <Popover
@@ -77,7 +77,7 @@ const Navbar = () => {
             >
               <Popover.Button
                 onClick={() => setOpen(!open)}
-                className="flex items-center text-sm leading-6"
+                className="flex items-center text-sm "
               >
                 Quiénes somos
                 <ChevronDownIcon
@@ -126,13 +126,13 @@ const Navbar = () => {
             {isLoggedIn && currentPath === "/reports" ? (
               <span 
                 onClick={() => logoutUser()}
-              className="text-sm leading-6 text-red-500 cursor-pointer">
+              className="text-sm text-red-500 cursor-pointer">
                 Cerrar Sesión
               </span>
             ) : (
               <Link
                 href={"/reports.html"}
-                className="text-sm leading-6 text-color-primario"
+                className="text-sm "
               >
                 Reportes
               </Link>
@@ -140,7 +140,7 @@ const Navbar = () => {
 
             <Link
               href={"/contact.html"}
-              className="text-sm leading-6 text-color-primario"
+              className="text-sm "
             >
               Contacto
             </Link>
@@ -177,31 +177,31 @@ const Navbar = () => {
                 <div className="space-y-2 py-6">
                   <Link
                     href={"/"}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    className="-mx-3 block rounded-lg  py-2 text-base font-semibold  hover:bg-gray-50"
                   >
                     Inicio
                   </Link>
                   <Link
                     href={"/equipo.html"}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold   hover:bg-gray-50"
                   >
                     Nuestro Equipo
                   </Link>
                   <Link
                     href={"/filosofia.html"}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold  text-gray-900 hover:bg-gray-50"
                   >
                     Filosofia
                   </Link>
                   <Link
                     href={"/reports.html"}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
                   >
                     Reportes
                   </Link>
                   <Link
                     href={"/contact.html"}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
                   >
                     Contacto
                   </Link>
