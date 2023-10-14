@@ -38,7 +38,7 @@ function AuthP() {
     setShowError(false);
 
     const isValidLogin = await loginUser(formulario.email, formulario.password);
-
+      debugger;
     if (!isValidLogin) {
       setShowError(true);
       setTimeout(() => setShowError(false), 3000);

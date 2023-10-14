@@ -68,7 +68,13 @@ export const AuthProvider = ({ children }: Props) => {
         email,
         password,
       });
+      
+      debugger;
       const { token, usuario } = response.data;
+      //Si es USER_ROLE no puede entrar
+      if (usuario.role === "USER_ROLE") {
+        return false;
+      }
       Cookies.set("token", token);
       dispatch({ type: "[Auth] - Login", payload: usuario });
       return true;
