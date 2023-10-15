@@ -104,7 +104,7 @@ const ReportsPage = () => {
       const { token, usuario } = data;
       console.log(" console.log(token, usuario.unidadEducativa);");
 
-      console.log(token, usuario.unidadEducativa, usuario.role, 'HOLA MUNDO');
+      console.log(token, usuario.unidadEducativa, usuario.role, "HOLA MUNDO");
       const newDataUser = {
         role: usuario.role,
         unidadEducativa: usuario.unidadEducativa,
@@ -138,6 +138,7 @@ const ReportsPage = () => {
     } else {
       setSelectedDateRange(range.range1);
     }
+    debugger;
     console.log(range.selection);
     console.log(range);
   };
@@ -384,7 +385,7 @@ const ReportsPage = () => {
     await obtenerEmergencias(selectedCiudad, selectedBarrio);
     await obtenerAnios(selectedCiudad, selectedBarrio, selectedAnio);
     console.log(selectedUnidadEducativa);
-
+    debugger;
     await generearGraficos(selectedValue);
   };
 
@@ -503,20 +504,21 @@ const ReportsPage = () => {
         console.error(error);
       });
   };
-  /* Emergencia */
+  /* TODO: Emergencia */
   const cambiarEmergencia = async (event: {
     target: { value: React.SetStateAction<string> };
   }) => {
     await setSelectedEmergencia(event.target.value);
     await obtenerAnios(selectedCiudad, selectedBarrio, selectedAnio);
-    await generearGraficos();
+    await generearGraficos(selectedUnidadEducativa);
   };
   const obtenerEmergencias = (ciudad: any, barrio: any) => {
     axios
       .post("http://192.188.58.82:3000/api/v2/reportes/obtenerEmergencias", {
         ciudad,
         barrio,
-        unidadEducativa: state.user?.role === "ADMIN_ROLE" ? state.user?.unidadEducativa : "",
+        unidadEducativa:
+          state.user?.role === "ADMIN_ROLE" ? state.user?.unidadEducativa : "",
       })
       .then((response) => {
         setEmergencias(response.data.data);
@@ -550,11 +552,11 @@ const ReportsPage = () => {
   /* HORAS */
   const cambiarHoraInicio = async (seleted: any) => {
     await setSelectedHoraInicio(seleted);
-    await generearGraficos();
+    await generearGraficos( selectedUnidadEducativa);
   };
   const cambiarHoraFin = async (seleted: any) => {
     await setSelectedHoraFin(seleted);
-    await generearGraficos();
+    await generearGraficos( selectedUnidadEducativa);
   };
   const cambiarMes = async (event: {
     target: { value: React.SetStateAction<string> };
@@ -571,7 +573,6 @@ const ReportsPage = () => {
 
   /* TODO: Graficas */
   const generearGraficos = async (unidadEducativaV2: any = "") => {
-
     await obtenerMapaCalor(
       selectedCiudad,
       selectedBarrio,
@@ -580,7 +581,7 @@ const ReportsPage = () => {
       selectedDateRange.endDate,
       selectedHoraInicio.$d,
       selectedHoraFin.$d,
-      unidadEducativaV2
+      unidadEducativaV2 ? unidadEducativaV2 : selectedUnidadEducativa
     );
     // debugger;
     await obtenerReporteBarras(
@@ -591,7 +592,7 @@ const ReportsPage = () => {
       selectedDateRange.endDate,
       selectedHoraInicio.$d,
       selectedHoraFin.$d,
-      unidadEducativaV2
+      unidadEducativaV2 ? unidadEducativaV2 : selectedUnidadEducativa
     );
 
     await obtenerReportPastel(
@@ -602,7 +603,7 @@ const ReportsPage = () => {
       selectedDateRange.endDate,
       selectedHoraInicio.$d,
       selectedHoraFin.$d,
-      unidadEducativaV2
+      unidadEducativaV2 ? unidadEducativaV2 : selectedUnidadEducativa
     );
 
     await obtenerCoordenadas(
@@ -613,7 +614,7 @@ const ReportsPage = () => {
       selectedDateRange.endDate,
       selectedHoraInicio.$d,
       selectedHoraFin.$d,
-      unidadEducativaV2
+      unidadEducativaV2 ? unidadEducativaV2 : selectedUnidadEducativa
     );
   };
 
@@ -627,6 +628,7 @@ const ReportsPage = () => {
     horaFin: any,
     unidadEducativa: any
   ) => {
+    debugger;
     axios
       .post("http://192.188.58.82:3000/api/v2/reportes/obtenerReporteBarras", {
         ciudad,
@@ -636,15 +638,19 @@ const ReportsPage = () => {
         fechaFin,
         horaInicio,
         horaFin,
-        unidadEducativa: state.user?.role === "ADMIN_ROLE" ? state.user?.unidadEducativa : unidadEducativa,
+        unidadEducativa:
+          state.user?.role === "ADMIN_ROLE"
+            ? state.user?.unidadEducativa
+            : unidadEducativa,
       })
       .then((response) => {
         setDataBarrasNumber(response.data.data);
         console.log(response.data.data);
+        debugger;
         const values: any = Object.keys(response.data.data);
         const conteos: any = Object.values(response.data.data);
         const labels: any = values.map((value: any) => value);
-
+        debugger;
         setDataBarras([
           {
             name: "Total de emergencias por día",
@@ -704,10 +710,13 @@ const ReportsPage = () => {
         fechaFin,
         horaInicio,
         horaFin,
-        unidadEducativa: state.user?.role === "ADMIN_ROLE" ? state.user?.unidadEducativa : unidadEducativa,
+        unidadEducativa:
+          state.user?.role === "ADMIN_ROLE"
+            ? state.user?.unidadEducativa
+            : unidadEducativa,
       })
       .then((response) => {
-        /* setDataBarrasNumber(response.data.data); */
+         setDataBarrasNumber(response.data.data); 
         const values: any = Object.keys(response.data.data);
         const conteos: any = Object.values(response.data.data);
         console.log("obtenerReportePastel");
@@ -1036,7 +1045,10 @@ const ReportsPage = () => {
         fechaFin,
         horaInicio,
         horaFin,
-        unidadEducativa: state.user?.role === "ADMIN_ROLE" ? state.user?.unidadEducativa : unidadEducativa,
+        unidadEducativa:
+          state.user?.role === "ADMIN_ROLE"
+            ? state.user?.unidadEducativa
+            : unidadEducativa,
       })
       .then((response) => {
         const tooltip: any = response.data.data.tooltip;
@@ -1417,16 +1429,15 @@ const ReportsPage = () => {
               Analítica de Incidentes Unidades Educativas
             </h1>
             <div className="fade-in">
-            <h5 className="text-lg ml-2  color-gray-light font-semibold">
-              Bienvenido/a {dataUser.nombre} de la Unidad Educativa {dataUser.unidadEducativa}
-            </h5>
+              <h5 className="text-lg ml-2  color-gray-light font-semibold">
+                Bienvenido/a {dataUser.nombre} de la Unidad Educativa{" "}
+                {dataUser.unidadEducativa}
+              </h5>
+            </div>
           </div>
-          </div>
-          
-          
 
           {/* AQUI EMPIEZAN LAS TARJETAS INFORMATIVAS */}
-          {isLoggedIn && dataUser.role === 'SUPER_ADMIN_ROLE' && (
+          {isLoggedIn && dataUser.role === "SUPER_ADMIN_ROLE" && (
             <div className="flex flex-col lg:flex-row w-full gap-2 lg:gap-6 mb-4">
               <div className="w-full xl:w-1/4 bg-color-primary rounded-lg px-4 shadow-lg flex items-center">
                 <ReporteCard
@@ -1464,7 +1475,6 @@ const ReportsPage = () => {
           )}
 
           {/* AQUI TERMINAN LAS TARJETAS INFORMATIVAS */}
-
 
           <div className="w-full flex flex-col-reverse lg:flex-row gap-6">
             <div className="w-full sm:w-full lg:w-1/2 2xl:w-2/3">
@@ -1685,8 +1695,6 @@ const ReportsPage = () => {
                     <DateRangePicker
                       locale={es}
                       staticRanges={esStaticRanges}
-                      inputRanges={esInputRanges}
-                      showSelectionPreview={false}
                       ranges={[selectedDateRange]}
                       onChange={handleDateChange}
                     />

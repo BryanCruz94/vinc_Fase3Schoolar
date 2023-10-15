@@ -28,12 +28,11 @@ const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [open, setOpen] = useState(false);
 
-  const { isLoggedIn,logoutUser } = useContext(AuthContext);
+  const { isLoggedIn, logoutUser } = useContext(AuthContext);
 
   const router = useRouter();
   const currentPath = router.pathname;
   console.log(currentPath);
-  
 
   return (
     <>
@@ -124,24 +123,19 @@ const Navbar = () => {
             </Popover>
 
             {isLoggedIn && currentPath === "/reports" ? (
-              <span 
+              <span
                 onClick={() => logoutUser()}
-              className="text-sm text-red-500 cursor-pointer">
+                className="text-sm text-red-500 cursor-pointer"
+              >
                 Cerrar Sesión
               </span>
             ) : (
-              <Link
-                href={"/reports.html"}
-                className="text-sm "
-              >
+              <Link href={"/reports.html"} className="text-sm ">
                 Reportes
               </Link>
             )}
 
-            <Link
-              href={"/contact.html"}
-              className="text-sm "
-            >
+            <Link href={"/contact.html"} className="text-sm ">
               Contacto
             </Link>
           </Popover.Group>
@@ -193,12 +187,23 @@ const Navbar = () => {
                   >
                     Filosofia
                   </Link>
-                  <Link
-                    href={"/reports.html"}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
-                  >
-                    Reportes
-                  </Link>
+
+                  {isLoggedIn && currentPath === "/reports" ? (
+                    <span
+                      onClick={() => logoutUser()}
+                      className="text-sm text-red-500 cursor-pointer"
+                    >
+                      Cerrar Sesión
+                    </span>
+                  ) : (
+                    <Link
+                      href={"/reports.html"}
+                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
+                    >
+                      Reportes
+                    </Link>
+                  )}
+
                   <Link
                     href={"/contact.html"}
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
