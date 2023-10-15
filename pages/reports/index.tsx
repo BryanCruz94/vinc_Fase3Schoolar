@@ -1422,6 +1422,15 @@ const ReportsPage = () => {
     translateRange(inputRangesLabels)
   );
 
+  //Si no hay usuario logeado, redireccionar al login
+  if (!isLoggedIn) {
+    return (
+      <div className="flex items-center justify-center h-screen">
+        Cargando...
+      </div>
+    );
+  }
+
   return (
     <>
       <Layout title="Reportes">
