@@ -294,7 +294,7 @@ const ReportsPage = () => {
   //TODO: obtener datos de unidades eduvativas
   const datosIniciales = async () => {
     await obtenerciudades();
-    await obtenerUnidadesEducativas();
+    // await obtenerUnidadesEducativas();
     await obtenerBarrios(selectedCiudad);
     await obtenerEmergencias(selectedCiudad, selectedBarrio);
     await obtenerAnios(selectedCiudad, selectedBarrio, selectedEmergencia);
@@ -571,29 +571,6 @@ const ReportsPage = () => {
 
   /* TODO: Graficas */
   const generearGraficos = async (unidadEducativaV2: any = "") => {
-    // debugger;
-    console.log(unidadEducativaV2);
-    console.log(`  selectedCiudad,
-    selectedBarrio,
-    selectedEmergencia,
-    selectedDateRange.startDate,
-    selectedDateRange.endDate,
-    selectedHoraInicio.$d,
-    selectedHoraFin.$d,
-    selectedUnidadEducativa`);
-
-    console.log(
-      selectedCiudad,
-      selectedBarrio,
-      selectedEmergencia,
-      selectedDateRange.startDate,
-      selectedDateRange.endDate,
-      selectedHoraInicio.$d,
-      selectedHoraFin.$d,
-      unidadEducativaV2
-    );
-
-    debugger;
 
     await obtenerMapaCalor(
       selectedCiudad,
