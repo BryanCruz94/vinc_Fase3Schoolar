@@ -138,7 +138,6 @@ const ReportsPage = () => {
     } else {
       setSelectedDateRange(range.range1);
     }
-    debugger;
     console.log(range.selection);
     console.log(range);
   };
@@ -385,7 +384,7 @@ const ReportsPage = () => {
     await obtenerEmergencias(selectedCiudad, selectedBarrio);
     await obtenerAnios(selectedCiudad, selectedBarrio, selectedAnio);
     console.log(selectedUnidadEducativa);
-    debugger;
+
     await generearGraficos(selectedValue);
   };
 
@@ -504,13 +503,13 @@ const ReportsPage = () => {
         console.error(error);
       });
   };
-  /* TODO: Emergencia */
+  /* Emergencia */
   const cambiarEmergencia = async (event: {
     target: { value: React.SetStateAction<string> };
   }) => {
     await setSelectedEmergencia(event.target.value);
     await obtenerAnios(selectedCiudad, selectedBarrio, selectedAnio);
-    await generearGraficos(selectedUnidadEducativa);
+    await generearGraficos();
   };
   const obtenerEmergencias = (ciudad: any, barrio: any) => {
     axios
@@ -552,11 +551,11 @@ const ReportsPage = () => {
   /* HORAS */
   const cambiarHoraInicio = async (seleted: any) => {
     await setSelectedHoraInicio(seleted);
-    await generearGraficos( selectedUnidadEducativa);
+    await generearGraficos();
   };
   const cambiarHoraFin = async (seleted: any) => {
     await setSelectedHoraFin(seleted);
-    await generearGraficos( selectedUnidadEducativa);
+    await generearGraficos();
   };
   const cambiarMes = async (event: {
     target: { value: React.SetStateAction<string> };
@@ -581,7 +580,7 @@ const ReportsPage = () => {
       selectedDateRange.endDate,
       selectedHoraInicio.$d,
       selectedHoraFin.$d,
-      unidadEducativaV2 ? unidadEducativaV2 : selectedUnidadEducativa
+      unidadEducativaV2
     );
     // debugger;
     await obtenerReporteBarras(
@@ -592,7 +591,7 @@ const ReportsPage = () => {
       selectedDateRange.endDate,
       selectedHoraInicio.$d,
       selectedHoraFin.$d,
-      unidadEducativaV2 ? unidadEducativaV2 : selectedUnidadEducativa
+      unidadEducativaV2
     );
 
     await obtenerReportPastel(
@@ -603,7 +602,7 @@ const ReportsPage = () => {
       selectedDateRange.endDate,
       selectedHoraInicio.$d,
       selectedHoraFin.$d,
-      unidadEducativaV2 ? unidadEducativaV2 : selectedUnidadEducativa
+      unidadEducativaV2
     );
 
     await obtenerCoordenadas(
@@ -614,7 +613,7 @@ const ReportsPage = () => {
       selectedDateRange.endDate,
       selectedHoraInicio.$d,
       selectedHoraFin.$d,
-      unidadEducativaV2 ? unidadEducativaV2 : selectedUnidadEducativa
+      unidadEducativaV2
     );
   };
 
@@ -628,7 +627,6 @@ const ReportsPage = () => {
     horaFin: any,
     unidadEducativa: any
   ) => {
-    debugger;
     axios
       .post("http://192.188.58.82:3000/api/v2/reportes/obtenerReporteBarras", {
         ciudad,
@@ -646,7 +644,6 @@ const ReportsPage = () => {
       .then((response) => {
         setDataBarrasNumber(response.data.data);
         console.log(response.data.data);
-        debugger;
         const values: any = Object.keys(response.data.data);
         const conteos: any = Object.values(response.data.data);
         const labels: any = values.map((value: any) => value);
@@ -711,9 +708,9 @@ const ReportsPage = () => {
         horaInicio,
         horaFin,
         unidadEducativa:
-          state.user?.role === "ADMIN_ROLE"
-            ? state.user?.unidadEducativa
-            : unidadEducativa,
+        state.user?.role === "ADMIN_ROLE"
+          ? state.user?.unidadEducativa
+          : unidadEducativa,
       })
       .then((response) => {
          setDataBarrasNumber(response.data.data); 
@@ -1695,6 +1692,8 @@ const ReportsPage = () => {
                     <DateRangePicker
                       locale={es}
                       staticRanges={esStaticRanges}
+                      inputRanges={esInputRanges}
+                      showSelectionPreview={false}
                       ranges={[selectedDateRange]}
                       onChange={handleDateChange}
                     />
