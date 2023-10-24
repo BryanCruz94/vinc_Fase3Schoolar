@@ -149,7 +149,7 @@ const HomePage = () => {
                       </p>
                       <p className="text-center">
                         {/* SE REDIRECCIONA A UNA PÁGINA DE DESCARGA DE CUENTA DE DRIVE DE BRYAN CRUZ */}
-                        <a href="https://drive.google.com/drive/folders/17wz-_CZUPsmN3YuJ79jD528oIn4-nE2K?usp=sharing" download target="_blank" className="bg-green-800 text-white font-semibold py-2 px-4 rounded hover:bg-green-600">
+                        <a href="https://drive.google.com/file/d/1MPFyVksnPHRM9paqvc0AjdNPe09HTJYT/view?usp=sharing" download target="_blank" className="bg-green-800 text-white font-semibold py-2 px-4 rounded hover:bg-green-600">
                           <svg xmlns="http://www.w3.org/2000/svg" className="inline w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                           </svg>

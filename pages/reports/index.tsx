@@ -1222,7 +1222,7 @@ const ReportsPage = () => {
         // Crear un enlace temporal para descargar el archivo
         const link = document.createElement("a");
         link.href = url;
-        link.setAttribute("download", "datos.xlsx"); // Nombre del archivo de descarga
+        link.setAttribute("download", "Reporte_IncidentesUE.xlsx"); // Nombre del archivo de descarga
         document.body.appendChild(link);
 
         // Hacer clic en el enlace para iniciar la descarga
@@ -1347,7 +1347,7 @@ const ReportsPage = () => {
         // Crear un enlace temporal para descargar el archivo
         const link = document.createElement("a");
         link.href = url;
-        link.setAttribute("download", "datos.csv"); // Nombre del archivo de descarga
+        link.setAttribute("download", "Reporte_IncidentesUE.csv"); // Nombre del archivo de descarga
         document.body.appendChild(link);
 
         // Hacer clic en el enlace para iniciar la descarga
