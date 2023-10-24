@@ -1545,7 +1545,7 @@ const ReportsPage = () => {
                 </div>
               </div>
               <div className="flex flex-col w-full gap-6 mt-4">
-                <div
+                {/* <div
                   className="w-full bg-color-primary rounded-lg shadow-lg p-4"
                   style={{ height: "400px" }}
                 >
@@ -1559,7 +1559,7 @@ const ReportsPage = () => {
                     width="100%"
                     height="85%"
                   />
-                </div>
+                </div> */}
                 <div
                   className="w-full bg-color-primary rounded-lg shadow-lg p-4"
                   style={{ height: "500px" }}

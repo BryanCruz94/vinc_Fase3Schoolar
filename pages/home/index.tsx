@@ -149,7 +149,7 @@ const HomePage = () => {
                       </p>
                       <p className="text-center">
                         {/* SE REDIRECCIONA A UNA PÁGINA DE DESCARGA DE CUENTA DE DRIVE DE BRYAN CRUZ */}
-                        <a href="https://drive.google.com/file/d/1Fu8yoUDN_t6WEy3dbZSD0GFG7VbofYv9/view?usp=sharing" download target="_blank" className="bg-green-800 text-white font-semibold py-2 px-4 rounded hover:bg-green-600">
+                        <a href="https://drive.google.com/drive/folders/17wz-_CZUPsmN3YuJ79jD528oIn4-nE2K?usp=sharing" download target="_blank" className="bg-green-800 text-white font-semibold py-2 px-4 rounded hover:bg-green-600">
                           <svg xmlns="http://www.w3.org/2000/svg" className="inline w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                           </svg>
@@ -164,7 +164,10 @@ const HomePage = () => {
                 <div className="w-full lg:w-1/2 h-full overflow-hidden">
                   <Animate.MoveIn>
                     <div className="flex h-full justify-center">
-                      <Image src="/seguridadVinculaciontwo/images/phone_1_f2.png" width={500} height={500} className="object-contain move-in" alt="logo" />
+                      <Image src="https://res.cloudinary.com/dfitq38dk/image/upload/v1698101064/dosCelularesWeb.png"
+                        width={500} height={500}
+                        className="object-contain move-in"
+                        alt="logo" />
                     </div>
                   </Animate.MoveIn>
                 </div>
@@ -196,7 +199,7 @@ const HomePage = () => {
             <Animate.MoveIn>
               <div className="w-full flex flex-col justify-center gap-y-10 lg:gap-y-0 items-center lg:flex-row">
                 <div className="w-full lg:w-1/2 flex justify-center lg:justify-end overflow-hidden">
-                  <Image width={550} height={500} src="/seguridadVinculaciontwo/images/phone_5_f2.png" className="move-in" alt="phone3" />
+                  <Image width={550} height={500} src="https://res.cloudinary.com/dfitq38dk/image/upload/v1698101712/inicioMovil_mitad_pept53.png" className="move-in" alt="phone3" />
                 </div>
                 <div className="w-full lg:w-1/2 h-full flex items-center lg:items-end pb-16 overflow-hidden">
                   <div className="text-start px-10 lg:px-0 h-full w-full move-in">
@@ -237,7 +240,7 @@ const HomePage = () => {
                     <div className="grid grid-cols-1 gap-4">
                       <div className="flex flex-row">
                         <div className="w-1/5 flex justify-center">
-                          <img className="mb-1" width="55" height="55" src="/seguridadVinculaciontwo/images/reporte.png" />
+                          <img className="mb-1" width="55" height="55" src="https://res.cloudinary.com/ddodvvqcq/image/upload/v1698090172/images/ReportesLogo.png" />
                         </div>
                         <div className="w-4/5 px-2">
                           <span>
@@ -298,7 +301,7 @@ const HomePage = () => {
                         </div>
                         <div className="w-4/5 px-2">
                           <span>
-                          Enviar estadísticas de seguridad a la comunidad sobre emergencias y sectores destacados.
+                            Enviar estadísticas de seguridad a la comunidad sobre emergencias y sectores destacados.
                           </span>
                         </div>
                       </div>
@@ -339,18 +342,68 @@ const HomePage = () => {
           </Animate.FadeIn>
           <div className="flex flex-wrap mt-5 ml-2 mr-2 text-center md:ml-5 md:mr-5 text-justify">
             <div className="w-full md:w-1/2 lg:w-1/2 p-2 md:p-4">
+              {/* <p>
+                En la Universidad de las Fuerzas Armadas ESPE Sede Santo Domingo, un grupo de docentes y los tesistas Vinicio Borja y Maria José Párraga expresaron su preocupación por la seguridad de la comunidad de Luz de América. Después de llevar a cabo encuestas en dicha comunidad con el objetivo de identificar sus necesidades técnicas, tomaron la decisión de desarrollar una aplicación denominada "Seguridad ESPE". Esta aplicación tiene como finalidad permitir a los usuarios reportar incidentes de seguridad en tiempo real a través de una plataforma web y una aplicación móvil.</p>
+             */}
               <p>
-              En la Universidad de las Fuerzas Armadas ESPE Sede Santo Domingo, un grupo de docentes y los tesistas Vinicio Borja y Maria José Párraga expresaron su preocupación por la seguridad de la comunidad de Luz de América. Después de llevar a cabo encuestas en dicha comunidad con el objetivo de identificar sus necesidades técnicas, tomaron la decisión de desarrollar una aplicación denominada "Seguridad ESPE". Esta aplicación tiene como finalidad permitir a los usuarios reportar incidentes de seguridad en tiempo real a través de una plataforma web y una aplicación móvil.</p>
+                A inicios del mes de marzo del 2023, en la Universidad de las Fuerzas Armadas ESPE, Sede Santo Domingo de
+                los Tsáchilas, se da inicio a la Fase I del proyecto de vinculación  titulado "IMPLEMENTACIÓN DE
+                APLICACIONES WEB Y MÓVILES PARA LA GESTIÓN DE EMERGENCIAS COMUNITARIAS EN LA PROVINCIA DE SANTO DOMINGO DE
+                LOS TSÁCHILAS", donde un grupo de docentes en un trabajo colaborativo con estudiantes de la carrera de
+                Ingeniería en Tecnologías de la Información, se inició en la comunidad de la parroquia de Luz de América.
+                Para atender esta necesidad, se llevaron a cabo encuestas como parte de un muestreo con el fin de
+                identificar los incidentes más comunes. Estas encuestas revelaron diversas problemáticas de seguridad,
+                incluyendo robos, vandalismo, desorden público y emergencias médicas, entre otras.
+                <br />
+                Con los datos recopilados en la Fase I, en el mes de mayo dos estudiantes de la carrera
+                desarrollaron el proyecto de Unidad de Integración Curricular denominado "Desarrollo de una aplicación
+                web y móvil para la gestión de alertas de emergencia comunitaria bajo el enfoque de metodologías ágiles",
+                la misma sirvió como punto de partida para el desarrollo de la aplicación "Seguridad ESPE". La
+                información recopilada se empleó para diseñar funciones y servicios específicos en la aplicación.
+
+              </p>
+
             </div>
             <div className="w-full md:w-1/2 lg:w-1/2 p-2 md:p-4">
+
+              {/* <p>
+                Con el tiempo, Seguridad ESPE se ha convertido en una herramienta esencial para mejorar la seguridad y fortalecer la comunidad. Basándose en las aplicaciones desarrolladas por los tesistas, se llevó a cabo la Fase II del proyecto de Vinculación con la Sociedad, denominado "IMPLEMENTACIÓN DE APLICACIONES WEB Y MÓVILES PARA LA GESTIÓN DE EMERGENCIAS COMUNITARIAS EN LA PROVINCIA DE SANTO DOMINGO DE LOS TSÁCHILAS". En esta ocasión, el enfoque se dirigió hacia las Unidades Educativas de las parroquias Puerto Limón y El Esfuerzo.</p>
+            */}
+
               <p>
-              Con el tiempo, Seguridad ESPE se ha convertido en una herramienta esencial para mejorar la seguridad y fortalecer la comunidad. Basándose en las aplicaciones desarrolladas por los tesistas, se llevó a cabo la Fase II del proyecto de Vinculación con la Sociedad, denominado "IMPLEMENTACIÓN DE APLICACIONES WEB Y MÓVILES PARA LA GESTIÓN DE EMERGENCIAS COMUNITARIAS EN LA PROVINCIA DE SANTO DOMINGO DE LOS TSÁCHILAS". En esta ocasión, el enfoque se dirigió hacia las Unidades Educativas de las parroquias Puerto Limón y El Esfuerzo.</p>
+                La principal meta de esta aplicación fue fortalecer la seguridad de la comunidad, fomentando la comunicación,
+                coordinación y respuesta ante situaciones de emergencia, y aprovechando el uso de dispositivos móviles e internet.
+                La aplicación ofrece una solución innovadora en el ámbito de la protección ciudadana.
+                <br />
+                Basándonos en las aplicaciones desarrolladas anteriormente, a inicios de septiembre del 2023 inició la Fase
+                II del Proyecto de Vinculación con la Sociedad, en esta fase, un grupo de diez estudiantes y tres docentes
+                de la UFA - ESPE Sede Santo Domingo de los Tsáchilas, recolectó datos mediante encuestas realizadas en
+                Unidades Educativas de la parroquia Puerto Limón y El Esfuerzo, estos datos se utilizaron como base para
+                desarrollar la aplicación <strong>"Schoolar Security”</strong>.
+                <br />
+                El propósito principal de esta aplicación es administrar y gestionar incidentes en las unidades
+                educativas, comenzando con las parroquias asignadas. Estas aplicaciones proveen información en tiempo real
+                sobre los incidentes, a las autoridades de dichas instituciones, además de generar estadísticas que
+                facilitan la toma de decisiones futuras para mejorar la calidad de vida, comunicación, seguridad de
+                todos los integrantes de la comunidad.
+
+              </p>
             </div>
             <div className="w-full md:w-1/2 lg:w-1/2 p-2 md:p-4">
-              <img src="/SeguridadESPE/images/menusession2.webp" width={500} height={500} alt="Primera foto" className="mx-auto" />
+              <img
+                src="https://res.cloudinary.com/dfitq38dk/image/upload/v1698103740/integrantesFase1.webp"
+                width={500}
+                height={500}
+                alt="Primera foto"
+                className="mx-auto rounded" ></img>
             </div>
             <div className="w-full md:w-1/2 lg:w-1/2 p-2 md:p-4">
-              <img src="https://res.cloudinary.com/ddodvvqcq/image/upload/t_FotoGruapl/v1696450796/images/FotoGrupal_Fase2.jpg" width={500} height={500} alt="Segunda foto" className="mx-auto" />
+              <img
+                src="https://res.cloudinary.com/dfitq38dk/image/upload/v1698104602/fotoFase_II.jpg"
+                width={500}
+                height={500}
+                alt="Segunda foto"
+                className="mx-auto rounded" ></img>
             </div>
 
           </div>

@@ -44,10 +44,10 @@ const Navbar = () => {
           <div className="hidden lg:flex">
             <Link href={"/"} className="-m-1.5 p-1.5">
               <span className="flex text-white justify-center items-center">
-                {/* <img className="h-8 w-auto mx-1" src="/seguridadVinculaciontwo/images/logo_blanco.png" alt="" /> */}
+                
                 <Image
-                  src="/seguridadVinculaciontwo/images/logo_web.png"
-                  width={200}
+                  src="https://res.cloudinary.com/dfitq38dk/image/upload/v1698101218/LogoHorizontal_WEB.png"
+                  width={180}
                   height={35}
                   alt="logo"
                   className="mr-3 rounded-full"
