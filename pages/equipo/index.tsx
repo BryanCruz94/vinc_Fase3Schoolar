@@ -208,7 +208,7 @@ const EquipoPage: FC<PropsWithChildren<{}>> = ({ }) => {
                             <Image
                               width={500}
                               height={500}
-                              src="/seguridadVinculaciontwo/images/vinicio.jpg"
+                              src="/schoolarSecurity/images/vinicio.jpg"
                               className="object-fill"
                               alt="Persona 1"
                             />
@@ -247,7 +247,7 @@ const EquipoPage: FC<PropsWithChildren<{}>> = ({ }) => {
                             <Image
                               width={500}
                               height={100}
-                              src="/seguridadVinculaciontwo/images/majo.jpg"
+                              src="/schoolarSecurity/images/majo.jpg"
                               alt="Persona 1"
                               className="object-cover object-top"
                             />

@@ -217,7 +217,7 @@ function AuthP() {
                         {/* Mensaje de si has olvidado la contraseña */}
                         <div className="flex justify-start">
                           <a
-                            href="/seguridadVinculaciontwo/recover/recover.html"
+                            href="/schoolarSecurity/recover/recover.html"
                             className="text-xs font-medium text-gray-900 dark:text-gray-900 hover:text-primary-600 mt-2"
                           >
                             ¿Olvidaste tu contraseña?

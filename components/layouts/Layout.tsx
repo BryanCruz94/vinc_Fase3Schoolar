@@ -22,7 +22,7 @@ export const Layout: FC<Props> = ({ children, title }) => {
             content={`Información sobre Seguridad ESPE ${title}`}
           />
           <meta name="keywords" content={`${title}, Seguridad, ESPE`} />
-          <link rel="icon" href="/seguridadVinculaciontwo/favicon.ico" type="image/x-icon" />
+          <link rel="icon" href="/schoolarSecurity/favicon.ico" type="image/x-icon" />
 
         </Head>
         <Navbar />

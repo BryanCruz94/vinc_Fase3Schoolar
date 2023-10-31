@@ -109,7 +109,7 @@ const FilosofiaPage = () => {
           <div className="pt-28">
             <div className="flex flex-col items-center justify-center gap-4 px-6 fade-in">
               <div className="overflow-hidden">
-                <Image width={260} height={250} className="move-in" src="/seguridadVinculaciontwo/images/espe.png" alt="espe" />
+                <Image width={260} height={250} className="move-in" src="/schoolarSecurity/images/espe.png" alt="espe" />
               </div>
 
               <h1 className="title">Universidad de las Fuerzas Armadas ESPE</h1>
@@ -147,10 +147,10 @@ const FilosofiaPage = () => {
                 <Carousel autoPlay={true} interval={3000} infiniteLoop={true}>
 
                   <div>
-                    <Image src="/seguridadVinculaciontwo/images/sede.jpg" width={700} height={100} alt="image" />
+                    <Image src="/schoolarSecurity/images/sede.jpg" width={700} height={100} alt="image" />
                   </div>
                   <div>
-                    <Image src="/seguridadVinculaciontwo/images/Espe-Sede-Santo-Domingo-2.jpg" width={700} height={100} alt="image" />
+                    <Image src="/schoolarSecurity/images/Espe-Sede-Santo-Domingo-2.jpg" width={700} height={100} alt="image" />
                   </div>
                 </Carousel>
               </div>
@@ -164,7 +164,7 @@ const FilosofiaPage = () => {
                 Principios y valores
               </h1>
               <div className="flex justify-center">
-                <img className="mb-1 " width="900" height="900" src="/seguridadVinculaciontwo/images/PrincipiosYValoresESPE.png" />
+                <img className="mb-1 " width="900" height="900" src="/schoolarSecurity/images/PrincipiosYValoresESPE.png" />
               </div>
             </Animate.FadeIn>
           </div>
@@ -267,7 +267,7 @@ const FilosofiaPage = () => {
                     </p>
                   </div>
                   <div className="lg:absolute lg:top-20 lg:left-2/4 lg:ml-10 shadow-xl">
-                    <Image src="/seguridadVinculaciontwo/images/DOCENTES ESPE.jpg" width={500} height={100} alt="image" />
+                    <Image src="/schoolarSecurity/images/DOCENTES ESPE.jpg" width={500} height={100} alt="image" />
                   </div>
                 </div>
               </div>
@@ -304,7 +304,7 @@ const FilosofiaPage = () => {
             </div>
             <div className={"flex justify-center p-2 " + (openTab === 3 ? "block" : "hidden")}>
               <div>
-                <img className="mx-auto my-4" width="640" height="720" src="/seguridadVinculaciontwo/images/objetivos.svg" alt="Objetivos"></img>
+                <img className="mx-auto my-4" width="640" height="720" src="/schoolarSecurity/images/objetivos.svg" alt="Objetivos"></img>
               </div>
             </div>
             <div className={"flex justify-center p-2  " + (openTab === 4 ? "block" : "hidden")}>

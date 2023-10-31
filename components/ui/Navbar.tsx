@@ -153,7 +153,7 @@ const Navbar = () => {
                 <span className="sr-only">Schoolar Security</span>
                 <img
                   className="h-8 w-auto"
-                  src="/seguridadVinculaciontwo/images/logo_preview_rev_1.png"
+                  src="/schoolarSecurity/images/logo_preview_rev_1.png"
                   alt=""
                 />
               </Link>

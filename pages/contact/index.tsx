@@ -234,7 +234,7 @@ const ContactPage = () => {
               <Image
                 width={1920}
                 height={1080}
-                src="/seguridadVinculaciontwo/images/espec2c.jpeg"
+                src="/schoolarSecurity/images/espec2c.jpeg"
                 className="object-cover object-center"
                 alt="Persona 1" />
             </div>
