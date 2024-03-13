@@ -22,7 +22,7 @@ const AUTH_INITIAL_STATE: AuthState = {
   user: undefined,
 };
 
-const baseUrl = "http://192.188.58.82:3000/api/v2";
+const baseUrl = "http://10.3.1.101:3000/api/v2";
 
 export const AuthProvider = ({ children }: Props) => {
   const [state, dispatch] = useReducer(authReducer, AUTH_INITIAL_STATE);

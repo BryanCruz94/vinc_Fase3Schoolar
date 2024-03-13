@@ -14,7 +14,8 @@ const AUTH_INITIAL_STATE: AuthState = {
   user: undefined,
 };
 
-const baseUrl = "http://192.188.58.82:3000/api/v2";
+
+const baseUrl = "10.3.1.101:3000/api/v2";
 import { AuthContext, AuthState, authReducer } from "@/context/auth";
 import Image from "next/image";
 import Swal from "sweetalert2";

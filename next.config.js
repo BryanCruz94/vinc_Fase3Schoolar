@@ -12,7 +12,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
- basePath: "/schoolarSecurity",
+ //basePath: "/schoolarSecurity",
 };
 
 module.exports = withTM(nextConfig);

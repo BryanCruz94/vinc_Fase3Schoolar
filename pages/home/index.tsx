@@ -399,7 +399,7 @@ const HomePage = () => {
             </div>
             <div className="w-full md:w-1/2 lg:w-1/2 p-2 md:p-4">
               <img
-                src="https://res.cloudinary.com/dfitq38dk/image/upload/v1698104602/fotoFase_II.jpg"
+                src="https://res.cloudinary.com/dfitq38dk/image/upload/c_fill,h_1105/v1699587287/fotoFase_II.jpg"
                 width={500}
                 height={500}
                 alt="Segunda foto"

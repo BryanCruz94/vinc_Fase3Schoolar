@@ -56,7 +56,7 @@ interface DataUer {
   unidadEducativa: string;
 }
 
-const baseUrl = "http://192.188.58.82:3000/api/v2";
+const baseUrl = "http://10.3.1.101:3000/api/v2";
 
 const defaultPosition = {
   lat: 35.7407872,
@@ -298,7 +298,8 @@ const ReportsPage = () => {
     await obtenerBarrios(selectedCiudad);
     await obtenerEmergencias(selectedCiudad, selectedBarrio);
     await obtenerAnios(selectedCiudad, selectedBarrio, selectedEmergencia);
-    await obtenerDatosCards();
+   //await obtenerDatosCards();
+    await obtenerDatosCardsF3();
     await generearGraficos();
     setPrimeraVez(false);
   };
@@ -306,7 +307,7 @@ const ReportsPage = () => {
   /* ciudad */
   const obtenerciudades = () => {
     axios
-      .get("http://192.188.58.82:3000/api/v2/reportes/obtenerCiudades") //api obtener ciudades
+      .get("http://10.3.1.101:3000/api/v2/reportes/obtenerCiudades") //api obtener ciudades
       .then((response) => {
         console.log("obtenerUnidadesEducativas");
 
@@ -324,7 +325,7 @@ const ReportsPage = () => {
   const obtenerUnidadesEducativas = () => {
     axios
       .get(
-        "http://192.188.58.82:3000/api/v2/reportes/obtenerUnidadesEducativas"
+        "http://10.3.1.101:3000/api/v2/reportes/obtenerUnidadesEducativas"
       ) //api obtener ciudades
       .then((response) => {
         setUnidadEducativa(response.data.data);
@@ -349,7 +350,7 @@ const ReportsPage = () => {
 
   // const obtenerUnidadesEducativas = (ciudad: any) => {
   //   axios
-  //     .post("http://192.188.58.82:3000/api/v2/reporte/obtenerUnidadesEducativas", { ciudad }) //api obtener ciudades
+  //     .post("http://10.3.1.101:3000/api/v2/reporte/obtenerUnidadesEducativas", { ciudad }) //api obtener ciudades
   //     .then((response) => {
   //       setUnidadEducativa(response.data.data);
   //       console.log(response.data.data);
@@ -459,7 +460,7 @@ const ReportsPage = () => {
         // Hacer la solicitud para obtener las unidades educativas
         let unidadEducativa = [];
         const response = await axios.get(
-          "http://192.188.58.82:3000/api/v2/reportes/obtenerUnidadesEducativas"
+          "http://10.3.1.101:3000/api/v2/reportes/obtenerUnidadesEducativas"
         );
 
         // Verificar si existe un usuario y su unidad educativa
@@ -493,7 +494,7 @@ const ReportsPage = () => {
 
   const obtenerBarrios = (ciudad: any) => {
     axios
-      .post("http://192.188.58.82:3000/api/v2/reportes/obtenerBarrios", {
+      .post("http://10.3.1.101:3000/api/v2/reportes/obtenerBarrios", {
         ciudad,
       }) //api obtener barrios de la provincia
       .then((response) => {
@@ -513,7 +514,7 @@ const ReportsPage = () => {
   };
   const obtenerEmergencias = (ciudad: any, barrio: any) => {
     axios
-      .post("http://192.188.58.82:3000/api/v2/reportes/obtenerEmergencias", {
+      .post("http://10.3.1.101:3000/api/v2/reportes/obtenerEmergencias", {
         ciudad,
         barrio,
         unidadEducativa:
@@ -536,7 +537,7 @@ const ReportsPage = () => {
 
   const obtenerAnios = (ciudad: any, barrio: any, titulo: any) => {
     axios
-      .post("http://192.188.58.82:3000/api/v2/reportes/obtenerAnios", {
+      .post("http://10.3.1.101:3000/api/v2/reportes/obtenerAnios", {
         ciudad,
         barrio,
         titulo,
@@ -628,7 +629,7 @@ const ReportsPage = () => {
     unidadEducativa: any
   ) => {
     axios
-      .post("http://192.188.58.82:3000/api/v2/reportes/obtenerReporteBarras", {
+      .post("http://10.3.1.101:3000/api/v2/reportes/obtenerReporteBarras", {
         ciudad,
         barrio,
         titulo,
@@ -699,7 +700,7 @@ const ReportsPage = () => {
     unidadEducativa: any
   ) => {
     axios
-      .post("http://192.188.58.82:3000/api/v2/reportes/obtenerReportePastel", {
+      .post("http://10.3.1.101:3000/api/v2/reportes/obtenerReportePastel", {
         ciudad,
         barrio,
         titulo,
@@ -1034,7 +1035,7 @@ const ReportsPage = () => {
     unidadEducativa: any
   ) => {
     axios
-      .post("http://192.188.58.82:3000/api/v2/reportes/obtenerMapaCalor", {
+      .post("http://10.3.1.101:3000/api/v2/reportes/obtenerMapaCalor", {
         ciudad,
         barrio,
         titulo,
@@ -1151,9 +1152,45 @@ const ReportsPage = () => {
         console.error(error);
       });
   };
+
+  /*
+  
+  Fase 3 
+  
+  
+  */
+
+  /*    OBTENER CARDS  */
+
+  const obtenerDatosCardsF3 = () => {
+    console.log("Datos enviados para card:", dataUser.unidadEducativa);
+    let unidadEducativa = dataUser.unidadEducativa;
+    axios
+      .post("http://10.3.1.101:3000/api/v2/reportes/obtenerDatosCardsF3", {
+        
+        unidadEducativa,
+          
+      })
+      .then((response) => {
+        setPublicacionesRegistradas(
+          response.data.data.publicacionesRegistradas
+        );
+        setUsuariosRegistros(response.data.data.usuariosRegistros);
+        setPublicacionesDelMes(response.data.data.publicacionesDelMes);
+        setPublicacionesDelDia(response.data.data.publicacionesDelDia);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
+
+  /* FIN FASE 3*/
+
+
   const obtenerDatosCards = () => {
     axios
-      .get("http://192.188.58.82:3000/api/v2/reportes/obtenerDatosCards")
+      .get("http://10.3.1.101:3000/api/v2/reportes/obtenerDatosCards")
       .then((response) => {
         setPublicacionesRegistradas(
           response.data.data.publicacionesRegistradas
@@ -1179,7 +1216,7 @@ const ReportsPage = () => {
   ) => {
     // debugger;
     axios
-      .post("http://192.188.58.82:3000/api/v2/reportes/obtenerCoordenadas", {
+      .post("http://10.3.1.101:3000/api/v2/reportes/obtenerCoordenadas", {
         ciudad,
         barrio,
         titulo,
@@ -1200,7 +1237,7 @@ const ReportsPage = () => {
   const descargarExcel = () => {
     axios
       .post(
-        "http://192.188.58.82:3000/api/v2/reportes/descargarXLSX",
+        "http://10.3.1.101:3000/api/v2/reportes/descargarXLSX",
         {
           ciudad: selectedCiudad,
           barrio: selectedBarrio,
@@ -1241,7 +1278,7 @@ const ReportsPage = () => {
 
     axios
       .post(
-        "http://192.188.58.82:3000/api/v2/reportes/descargarPDF",
+        "http://10.3.1.101:3000/api/v2/reportes/descargarPDF",
         {
           ciudad: selectedCiudad,
           barrio: selectedBarrio,
@@ -1262,7 +1299,7 @@ const ReportsPage = () => {
         console.log(response.data);
 
         axios
-          .get("http://192.188.58.82:3000/api/v2/documents", {
+          .get("http://10.3.1.101:3000/api/v2/documents", {
             responseType: "arraybuffer",
           })
           .then((res) => {
@@ -1292,7 +1329,7 @@ const ReportsPage = () => {
   const verPDF = () => {
     axios
       .post(
-        "http://192.188.58.82:3000/api/v2/reportes/descargarPDF",
+        "http://10.3.1.101:3000/api/v2/reportes/descargarPDF",
         {
           ciudad: selectedCiudad,
           barrio: selectedBarrio,
@@ -1325,7 +1362,7 @@ const ReportsPage = () => {
   const descargarCSV = () => {
     axios
       .post(
-        "http://192.188.58.82:3000/api/v2/reportes/descargarCSV",
+        "http://10.3.1.101:3000/api/v2/reportes/descargarCSV",
         {
           ciudad: selectedCiudad,
           barrio: selectedBarrio,
@@ -1434,7 +1471,7 @@ const ReportsPage = () => {
           </div>
 
           {/* AQUI EMPIEZAN LAS TARJETAS INFORMATIVAS */}
-          {isLoggedIn && dataUser.role === "SUPER_ADMIN_ROLE" && (
+          {isLoggedIn  && (
             <div className="flex flex-col lg:flex-row w-full gap-2 lg:gap-6 mb-4">
               <div className="w-full xl:w-1/4 bg-color-primary rounded-lg px-4 shadow-lg flex items-center">
                 <ReporteCard

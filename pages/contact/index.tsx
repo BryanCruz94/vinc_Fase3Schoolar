@@ -181,7 +181,7 @@ const ContactPage = () => {
           error: ""
         })
         // Tienes que cambiar esta direccion a donde vaya a quedar alojado tu backend
-        let response = await fetch("http://192.188.58.82:3000/api/v2/email/send", {
+        let response = await fetch("http://10.3.1.101:3000/api/v2/email/send", {
           method: "POST",
           headers: {
             "Content-Type": "application/json;charset=utf-8",

@@ -31,7 +31,7 @@
 //         console.log("credentials");
 //         console.log({ credentials });
 //         // // return { name: 'Juan', correo: 'juan@google.com', role: 'admin' };
-//         const pathUrl = "http://192.188.58.82:3000/api/v2/login"; // Agrega el protocolo "http://" si es necesario
+//         const pathUrl = "http://10.3.1.101:3000/api/v2/login"; // Agrega el protocolo "http://" si es necesario
 //         console.log("pathUrl");
 //         console.log({ pathUrl });
 //         console.log( {email: credentials.email, password: credentials.password});
